@@ -574,6 +574,9 @@ footer .quick-links ul li {
         color: var(--clr-grey);
         background-color: var(--clr-blk);
     }
+    .links ul li a {
+        color: var(--clr-grey);
+    }
     .bars::before,
     .bars::after {
         background-color: var(--clr-grey);
