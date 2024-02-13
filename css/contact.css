@@ -74,7 +74,7 @@ body {
     background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    z-index: 15;
+    z-index: 1;
 }
 .bars {
     position: relative;
@@ -194,7 +194,7 @@ nav.active .hamburger-menu .bars::after {
         transform: translateX(100%);
         transition: 300ms;
         overflow-y: auto;
-        z-index: 15;
+        z-index: 1;
     }
     .links ul {
         position: relative;

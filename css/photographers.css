@@ -21,6 +21,7 @@ body {
 }
 .wrapper {
     max-width: 86rem;
+    padding-bottom: 13rem;
 }
 /*LINKS*/
 .links {
@@ -74,7 +75,7 @@ body {
     background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    z-index: 15;
+    z-index: 2;
 }
 .bars {
     position: relative;
@@ -166,7 +167,7 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 2;
+    z-index: 1;
 }
 .card .content {
     position: absolute;
@@ -212,7 +213,7 @@ nav.active .hamburger-menu .bars::after {
         transform: translateX(100%);
         transition: 300ms;
         overflow-y: auto;
-        z-index: 15;
+        z-index: 2;
     }
     .links ul {
         position: relative;
