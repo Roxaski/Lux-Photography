@@ -175,9 +175,6 @@ nav.active .hamburger-menu .bars::after {
         position: fixed;
         overflow-y: hidden;
     }
-    body {
-        overflow: auto;
-    }
     nav.active .links {
         transform: translateX(0);
     }
