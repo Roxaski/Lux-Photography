@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@100;200;300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --clr-blk: #1c1c1c;
+    --clr-white: #fff;
+    --clr-offWhite: #f8f8f8;
+    --clr-grey: #c4c4c4;
+    --clr-darkGrey: #313030;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-offWhite);
+    color: var(--clr-blk);
+    cursor: default;
+    overflow: hidden;
+}
+.wrapper {
+    max-width: 86rem;
+}
+/*LINKS*/
+.links {
+    position: relative;
+}
+.links ul {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+.links ul li {
+    display: inline-block;
+    font-size: clamp(.95rem, 3vw, 1rem);
+    font-family: 'Poiret One', sans-serif;
+    text-transform: capitalize;
+    list-style: none;
+    padding: 1rem;
+}
+.links ul li a {
+    position: relative;
+    color: var(--clr-white);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 350ms ease all;
+    -webkit-tap-highlight-color: transparent;
+}
+.links ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: .5px;
+    background-color: var(--clr-white);
+    transition: 350ms ease;
+}
+.links ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+.hamburger-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    width: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 15;
+}
+.bars {
+    position: relative;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.bars::before,
+.bars::after {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--clr-white);
+    transition: 350ms ease;
+}
+.bars::before {
+    transform: translateY(-4px);
+}
+.bars::after {
+    transform: translateY(4px);
+}
+nav.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+nav.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
+/*PHOTOGRAPHER CARDS*/
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    top: 150px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: var(--clr-grey) 2px solid;
+    background: var(--clr-white);
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+}
+.card:hover {
+    height: 375px;
+}
+.card .more-info {
+    position: absolute;
+    bottom: 1rem;
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    opacity: 1;
+    text-align: center;
+}
+.card .more-info h1 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: clamp(.9rem, 3vw, .95rem);
+}
+.card:hover .more-info {
+    opacity: 0;
+}
+.card .img-container {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    height: 150px;
+    border-radius: 5px;
+    transition: 250ms ease-in-out;
+    overflow: hidden;
+}
+.card:hover .img-container {
+    top: -25px;
+}
+.card .img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+.card .content {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    padding: 0 2rem;
+    transition: 250ms ease;
+}
+.card:hover .content {
+    top: 150px;
+    overflow: hidden;
+}
+.card .content p {
+    font-size: clamp(.95rem, 3vw, 1rem);
+    line-height: 1.6;
+    opacity: 0;
+    transition: 100ms ease-in-out all;
+}
+.card:hover .content p {
+    opacity: 1;
+}
+/*MEDIA QUERY'S*/
+@media screen and (max-width: 1195px) {
+    .no-scroll {
+        overflow-y: hidden;
+    }
+    body {
+        overflow: auto;
+    }
+    nav.active .links {
+        transform: translateX(0);
+    }
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: var(--clr-white);
+        transform: translateX(100%);
+        transition: 300ms;
+        overflow-y: auto;
+        z-index: 15;
+    }
+    .links ul {
+        position: relative;
+        flex-direction: column;
+    }
+    .links ul li {
+        padding: 1.75rem;
+    }
+    .links ul li a {
+        font-weight: 600;
+        color: var(--clr-blk);
+    }
+    .links ul li a::before {
+        content: none;
+    }
+    nav.active .bars::before,
+    nav.active .bars::after {
+        background-color: var(--clr-blk);
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    .content-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 2rem;
+        gap: 4rem 0;
+    }
+    .card {
+        height: 375px;
+    }
+    .card .img-container {
+        position: absolute;
+        top: -25px;
+    }
+    .card .content {
+        padding: 0 1.5rem;
+    }
+    .card:hover .content {
+        top: 130px;
+    }
+    .card .content p {
+        opacity: 1;
+    }
+    .card .more-info {
+        display: none;
+    }
+}
+@media screen and (max-width: 973px) {
+    .content-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 695px) {
+    .content-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media screen and (max-width: 385px) {
+    .content-wrapper {
+        padding: 0;
+    }
+}
+/*DARK MODE*/
+@media screen and (prefers-color-scheme: dark) and (max-width: 1195px) {
+    .links {
+        background-color: var(--clr-blk);
+    }
+    .links ul li a {
+        color: var(--clr-grey);
+    }
+}
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        color: var(--clr-grey);
+        background-color: var(--clr-blk);
+    }
+    nav.active .hamburger-menu .bars::before,
+    nav.active .hamburger-menu .bars::after {
+        background-color: var(--clr-grey);
+    }
+    .card {
+        border: var(--clr-grey) 2px solid;
+        background: var(--clr-darkGrey);
+        box-shadow: none;
+    }
+    .card .img-container img {
+        border: 2px solid var(--clr-grey);
+    }
+}

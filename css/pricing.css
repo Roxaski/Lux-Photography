@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@100;200;300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --clr-blk: #1c1c1c;
+    --clr-white: #fff;
+    --clr-offWhite: #f8f8f8;
+    --clr-grey: #c4c4c4;
+    --clr-darkGrey: #313030;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--clr-offWhite);
+    color: var(--clr-blk);
+    cursor: default;
+    overflow: hidden;
+}
+.wrapper {
+    max-width: 86rem;
+}
+/*LINKS*/
+.links {
+    position: relative;
+}
+.links ul {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+.links ul li {
+    display: inline-block;
+    font-size: clamp(.95rem, 3vw, 1rem);
+    font-family: 'Poiret One', sans-serif;
+    text-transform: capitalize;
+    list-style: none;
+    padding: 1rem;
+}
+.links ul li a {
+    position: relative;
+    color: var(--clr-white);
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 350ms ease all;
+    -webkit-tap-highlight-color: transparent;
+}
+.links ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: .5px;
+    background-color: var(--clr-white);
+    transition: 350ms ease;
+}
+.links ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+.hamburger-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    width: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 15;
+}
+.bars {
+    position: relative;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.bars::before,
+.bars::after {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--clr-white);
+    transition: 350ms ease;
+}
+.bars::before {
+    transform: translateY(-4px);
+}
+.bars::after {
+    transform: translateY(4px);
+}
+nav.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+nav.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
+}
+/*PRICING CARDS*/
+.content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+}
+.card {
+    position: relative;
+    top: 85px;
+    background-color: var(--clr-white);
+    border-radius: 5px;
+    box-shadow:2px 2px 5px rgba(0, 0, 0, .7);
+}
+.card .title {
+    border-radius: 5px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    padding: 2rem;
+    color: var(--clr-offWhite);
+    background: #c57e32;
+    background: linear-gradient(0deg, rgb(197, 126, 50) 0%, rgb(222, 78, 104) 100%);
+}
+.card .title h1 {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-align: center;
+}
+.card .title h1:nth-child(2) {
+    font-size: clamp(.9rem, 3vw, .95rem);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.card .price h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin: 25px auto 0;
+    text-align: center;
+}
+.card .price h3 {
+    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.card .list ul {
+    line-height: 2.2;
+    padding: 3rem 2rem;
+}
+.card .list ul li {
+    font-size: clamp(.9rem, 3vw, 1rem);
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+.card button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 2px;
+    padding: .5rem;
+    color: var(--clr-white);
+    background: linear-gradient(175deg, rgb(197, 126, 50) 25%, rgb(222, 78, 104) 90%);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+}
+/*MEDIA QUERY'S*/
+@media screen and (max-width: 1195px) {
+    .no-scroll {
+        overflow-y: hidden;
+    }
+    body {
+        overflow: auto;
+    }
+    nav.active .links {
+        transform: translateX(0);
+    }
+    .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: var(--clr-white);
+        transform: translateX(100%);
+        transition: 300ms;
+        overflow-y: auto;
+        z-index: 15;
+    }
+    .links ul {
+        position: relative;
+        flex-direction: column;
+    }
+    .links ul li {
+        padding: 1.75rem;
+    }
+    .links ul li a {
+        font-weight: 600;
+        color: var(--clr-blk);
+    }
+    .links ul li a::before {
+        content: none;
+    }
+    nav.active .bars::before,
+    nav.active .bars::after {
+        background-color: var(--clr-blk);
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    .content-wrapper {
+        padding-bottom: 2rem;
+    }
+}
+@media screen and (max-width: 843px) {
+    .content-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 658px) {
+    .content-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 250px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .content-wrapper {
+        padding: 0 .5rem;
+    }
+}
+/*DARK MODE*/
+@media screen and (prefers-color-scheme: dark) and (max-width: 1195px) {
+    .links {
+        background-color: var(--clr-blk);
+    }
+    .links ul li a {
+        color: var(--clr-grey);
+    }
+}
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        color: var(--clr-grey);
+        background-color: var(--clr-blk);
+    }
+    nav.active .hamburger-menu .bars::before,
+    nav.active .hamburger-menu .bars::after {
+        background-color: var(--clr-grey);
+    }
+    .card {
+        color: var(--clr-offWhite);
+        background-color: var(--clr-darkGrey);
+        border: solid 2px var(--clr-grey);
+        box-shadow: none;
+    }
+    .card .title {
+        background: #c57e32;
+        background: linear-gradient(0deg, rgb(197, 126, 50) 0%, rgb(186, 68, 90) 100%);
+    }
+}
