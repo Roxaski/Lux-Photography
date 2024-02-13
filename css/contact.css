@@ -222,6 +222,11 @@ nav.active .hamburger-menu .bars::after {
         margin: 10px auto 15px;
     }
 }
+@media screen and (orientation: landscape) {
+    body {
+        overflow: auto;
+    }
+}
 /*DARK MODE*/
 @media screen and (prefers-color-scheme: dark) and (max-width: 1195px) {
     .links {
