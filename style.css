@@ -443,6 +443,7 @@ footer .quick-links ul li {
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {
     .no-scroll {
+        position: fixed;
         overflow-y: hidden;
     }
     nav.active .links {
