@@ -243,6 +243,13 @@ nav.active .hamburger-menu .bars::after {
         color: var(--clr-grey);
         background-color: var(--clr-blk);
     }
+    .links ul li a {
+        color: var(--clr-grey);
+    }
+    .bars::before,
+    .bars::after {
+        background-color: var(--clr-grey);
+    }
     nav.active .hamburger-menu .bars::before,
     nav.active .hamburger-menu .bars::after {
         background-color: var(--clr-grey);
