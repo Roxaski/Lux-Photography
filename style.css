@@ -46,6 +46,7 @@ body {
     display: inline-block;
     font-size: clamp(.95rem, 3vw, 1rem);
     font-family: 'Poiret One', sans-serif;
+    font-weight: 600;
     text-transform: capitalize;
     list-style: none;
     padding: 1rem;

@@ -31,6 +31,7 @@ body {
 }
 .wrapper {
     max-width: 86rem;
+    padding-bottom: 12rem;
 }
 /*LINKS*/
 .links {
@@ -46,13 +47,14 @@ body {
     display: inline-block;
     font-size: clamp(.95rem, 3vw, 1rem);
     font-family: 'Poiret One', sans-serif;
+    font-weight: 600;
     text-transform: capitalize;
     list-style: none;
     padding: 1rem;
 }
 .links ul li a {
     position: relative;
-    color: var(--clr-white);
+    color: var(--clr-darkGrey);
     text-decoration: none;
     letter-spacing: 2px;
     transition: 350ms ease all;
@@ -100,7 +102,7 @@ body {
     height: 70%;
     width: 100%;
     border-radius: 5px;
-    background-color: var(--clr-white);
+    background-color: var(--clr-darkGrey);
     transition: 350ms ease;
 }
 .bars::before {
@@ -250,9 +252,6 @@ nav.active .hamburger-menu .bars::after {
     }
     .hamburger-menu {
         display: flex;
-    }
-    .content-wrapper {
-        padding-bottom: 2rem;
     }
 }
 @media screen and (max-width: 725px) {
