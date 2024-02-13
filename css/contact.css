@@ -21,7 +21,6 @@ body {
 }
 .wrapper {
     max-width: 86rem;
-    padding-bottom: 10rem;
 }
 /*LINKS*/
 .links {
@@ -30,8 +29,6 @@ body {
 .links ul {
     display: flex;
     justify-content: flex-end;
-    position: absolute;
-    right: 0;
 }
 .links ul li {
     display: inline-block;
@@ -111,11 +108,9 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    position: relative;
-    top: 150px;
     background: var(--clr-darkGrey);
     width: 80%;
-    margin: 0 auto;
+    margin: 100px auto;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);

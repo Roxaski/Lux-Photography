@@ -21,7 +21,7 @@ body {
 }
 .wrapper {
     max-width: 86rem;
-    padding-bottom: 10rem;
+    padding-bottom: 1rem;
 }
 /*LINKS*/
 .links {
@@ -30,8 +30,6 @@ body {
 .links ul {
     display: flex;
     justify-content: flex-end;
-    position: absolute;
-    right: 0;
 }
 .links ul li {
     display: inline-block;
@@ -113,12 +111,11 @@ nav.active .hamburger-menu .bars::after {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     width: 800px;
-    margin: 0 auto;
     font-family: 'Poppins', sans-serif;
+    margin: 45px auto;
 }
 .card {
     position: relative;
-    top: 85px;
     background-color: var(--clr-white);
     border-radius: 5px;
     box-shadow:2px 2px 5px rgba(0, 0, 0, .7);
@@ -230,6 +227,9 @@ nav.active .hamburger-menu .bars::after {
     }
     .hamburger-menu {
         display: flex;
+    }
+    .content-wrapper {
+        margin: 100px auto;
     }
 }
 @media screen and (max-width: 843px) {
