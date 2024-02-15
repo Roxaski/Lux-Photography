@@ -472,7 +472,6 @@ footer .quick-links ul li {
         padding: 1.75rem;
     }
     .links ul li a {
-        font-weight: 600;
         color: var(--clr-blk);
     }
     .links ul li a::before {

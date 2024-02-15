@@ -223,7 +223,6 @@ nav.active .hamburger-menu .bars::after {
         padding: 1.75rem;
     }
     .links ul li a {
-        font-weight: 600;
         color: var(--clr-blk);
     }
     .links ul li a::before {
@@ -273,6 +272,11 @@ nav.active .hamburger-menu .bars::after {
 @media screen and (max-width: 385px) {
     .content-wrapper {
         padding: 0;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 975px) {
+    .links ul li {
+        padding: 1.5rem;
     }
 }
 /*DARK MODE*/
