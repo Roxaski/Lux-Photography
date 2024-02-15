@@ -132,6 +132,7 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
     height: auto;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, .7);
 }
 .img-preview {
@@ -311,6 +312,7 @@ nav.active .hamburger-menu .bars::after {
         background-color: var(--clr-grey);
     }
     .content-wrapper img {
+        color: var(--clr-offWhite);
         box-shadow: none;
     }
     .img-preview {

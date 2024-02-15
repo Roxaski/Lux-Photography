@@ -122,7 +122,8 @@ nav.active .hamburger-menu .bars::after {
     height: auto;
     padding: .5rem;
     border-radius: 15px;
-    color: var(--clr-white);
+    color: var(--clr-offWhite);
+    font-family: 'Poppins', sans-serif;
 }
 .right {
     padding: 0 1rem;
