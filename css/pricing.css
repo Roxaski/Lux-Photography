@@ -249,6 +249,11 @@ nav.active .hamburger-menu .bars::after {
         padding: 0 .5rem;
     }
 }
+@media screen and (orientation: landscape) and (max-width: 935px) {
+    .links ul li {
+        padding: 1.1rem;
+    }
+}
 /*DARK MODE*/
 @media screen and (prefers-color-scheme: dark) and (max-width: 1195px) {
     .links {
