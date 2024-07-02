@@ -8,7 +8,7 @@
     --clr-blk: #1c1c1c;
     --clr-white: #fff;
     --clr-offWhite: #f8f8f8;
-    --clr-lightGrey: #585858;
+    --clr-lightGrey: #b7b6b6;
     --clr-grey: #c4c4c4;
     --clr-darkGrey: #313030;
 }
@@ -128,9 +128,6 @@ nav.active .hamburger-menu .bars::after {
     transition: 250ms ease-in-out;
     cursor: pointer;
 }
-.card i {
-    color: var(--clr-lightGrey);
-}
 .card:hover {
     height: 375px;
 }
@@ -143,12 +140,21 @@ nav.active .hamburger-menu .bars::after {
 }
 .card .more-info h1 {
     text-transform: uppercase;
-    font-weight: 400;
     letter-spacing: 2px;
-    font-size: clamp(.9rem, 3vw, .95rem);
+}
+.card .more-info h1:nth-child(1) {
+    font-weight: 400;
+    font-size: clamp(.9rem, 3vw, 1rem);
+}
+.card .more-info h1:nth-child(2) {
+    font-weight: 300;
+    font-size: .8rem;
 }
 .card:hover .more-info {
     opacity: 0;
+}
+.card i {
+    color: var(--clr-lightGrey);
 }
 .card .img-container {
     position: absolute;
