@@ -295,4 +295,7 @@ nav.active .hamburger-menu .bars::after {
         background: #c57e32;
         background: linear-gradient(0deg, rgb(197, 126, 50) 0%, rgb(186, 68, 90) 100%);
     }
+    .card .price h2 {
+        color: var(--clr-offWhite);
+    }
 }
