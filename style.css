@@ -216,7 +216,7 @@ section {
 }
 #photographers .content p {
     font-size: clamp(.95rem, 3vw, 1rem);
-    font-weight: 400;
+    font-weight: 300;
     margin: 15px auto;
 }
 /*DISCOVER SECTION*/

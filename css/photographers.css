@@ -8,6 +8,7 @@
     --clr-blk: #1c1c1c;
     --clr-white: #fff;
     --clr-offWhite: #f8f8f8;
+    --clr-lightGrey: #585858;
     --clr-grey: #c4c4c4;
     --clr-darkGrey: #313030;
 }
@@ -127,6 +128,9 @@ nav.active .hamburger-menu .bars::after {
     transition: 250ms ease-in-out;
     cursor: pointer;
 }
+.card i {
+    color: var(--clr-lightGrey);
+}
 .card:hover {
     height: 375px;
 }
@@ -183,6 +187,7 @@ nav.active .hamburger-menu .bars::after {
 .card .content p {
     font-size: clamp(.95rem, 3vw, 1rem);
     line-height: 1.6;
+    font-weight: 300;
     opacity: 0;
     transition: 100ms ease-in-out all;
 }
