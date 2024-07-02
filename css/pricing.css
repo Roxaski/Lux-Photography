@@ -8,6 +8,7 @@
     --clr-blk: #1c1c1c;
     --clr-white: #fff;
     --clr-offWhite: #f8f8f8;
+    --clr-midGrey: #3d3d3d;
     --clr-grey: #c4c4c4;
     --clr-darkGrey: #313030;
 }
@@ -142,8 +143,9 @@ nav.active .hamburger-menu .bars::after {
     text-transform: capitalize;
 }
 .card .price h2 {
+    color: var(--clr-midGrey);
     font-size: clamp(1.5rem, 3vw, 2.5rem);
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1.5px;
     margin: 25px auto 0;
     text-align: center;
@@ -160,6 +162,7 @@ nav.active .hamburger-menu .bars::after {
     padding: 3rem 2rem;
 }
 .card .list ul li {
+    font-weight: 300;
     font-size: clamp(.9rem, 3vw, 1rem);
     text-transform: capitalize;
     letter-spacing: .5px;

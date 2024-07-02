@@ -9,6 +9,7 @@
     --clr-white: #fff;
     --clr-offWhite: #f8f8f8;
     --clr-grey: #c4c4c4;
+    --clr-lightGrey: #b7b6b6;
     --clr-darkGrey: #313030;
 }
 body {
@@ -169,7 +170,8 @@ nav.active .hamburger-menu .bars::after {
     cursor: pointer;
 }
 .right .contact-form input[type="button"]:hover {
-    background-color: var(--clr-grey);
+    color: var(--clr-white);
+    background-color: var(--clr-lightGrey);
 }
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {
