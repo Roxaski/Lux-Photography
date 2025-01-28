@@ -168,7 +168,7 @@ nav.active .hamburger-menu .bars::after {
 }
 .right .contact-form input[type="button"] {
     font-size: clamp(.8rem, 3vw, .9rem);
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: .5px;
     margin: 5px auto;
     min-width: 30%;
