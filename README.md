@@ -4,7 +4,7 @@
 
 ## Welcome to Lux Photography
 
-Lux Photography was created as a passion project. I am a huge fan of photography, so i created this website as a means to be able to showcase a wide variety of photography styles, all thanks to wonderful photographers who share their works of art online. You can browse the gallery to see these quality images, and check out some talented artists while your browsing the site.
+Lux Photography was created as a passion project. I am a huge fan of photography, so i created this website as a means to be able to showcase a wide variety of photography styles, all thanks to wonderful photographers who share their works of art online. You can browse the gallery to see these quality images, and check out some talented artists while your browsing the site if you'd like.
 
 ## Feedback 
 
