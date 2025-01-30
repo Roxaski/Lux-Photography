@@ -12,4 +12,4 @@ If anyone has any feedback i would greatly appreciate, as i'm currently learning
 
 ## Image Credits 
 
-Thankyou to all the incredible and talented photographers whose photographs i have used all throughout the website. All images used are from [pixabay](https://pixabay.com) and [unsplash](https://unsplash.com), highly recommend checking them out for high quality images.
+Thankyou to the incredible photographers whose high quality images i have used all throughout the website. All images used are from [pixabay](https://pixabay.com) and [unsplash](https://unsplash.com), highly recommend checking them out for high quality images.
