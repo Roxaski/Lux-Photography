@@ -114,7 +114,6 @@ nav.active .hamburger-menu .bars::after {
     margin: 100px auto;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);
 }
 .left img {
     display: block;
@@ -272,7 +271,6 @@ nav.active .hamburger-menu .bars::after {
     }
     .content-wrapper {
         border: solid 2px var(--clr-grey);
-        box-shadow: none;
     }
     .right .contact-form input,
     .right .contact-form textarea {
