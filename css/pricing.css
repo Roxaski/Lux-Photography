@@ -118,7 +118,7 @@ nav.active .hamburger-menu .bars::after {
     position: relative;
     background-color: var(--clr-white);
     border-radius: 5px;
-    box-shadow:2px 2px 5px rgba(0, 0, 0, .7);
+    box-shadow: 2px 1px 10px rgba(0, 0, 0, .4);
 }
 .card .title {
     border-radius: 5px;

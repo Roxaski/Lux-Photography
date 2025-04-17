@@ -123,7 +123,6 @@ nav.active .hamburger-menu .bars::after {
     height: 300px;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, .5);
     transition: 250ms ease-in-out;
     cursor: pointer;
 }
@@ -325,7 +324,6 @@ nav.active .hamburger-menu .bars::after {
     .card {
         border: var(--clr-grey) 2px solid;
         background: var(--clr-darkGrey);
-        box-shadow: none;
     }
     .card .img-container img {
         color: var(--clr-offWhite);
