@@ -203,7 +203,6 @@ section {
     font-family: 'Poppins', sans-serif;
 }
 #photographers .img-wrapper img {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -266,7 +265,6 @@ section {
 }
 /*ADVERTISEMENT*/
 #advertisement .img-wrapper img {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -284,7 +282,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(4rem, 3vw, 5rem);
+    font-size: clamp(3.25rem, 3vw, 4.25rem);
     margin: 10px auto;
 }
 #price-icons .grid-container i:before {

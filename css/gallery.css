@@ -127,7 +127,6 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
 }
 .content-wrapper img {
-    display: block;
     width: 100%;
     height: auto;
     cursor: pointer;
