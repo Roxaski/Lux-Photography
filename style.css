@@ -398,7 +398,7 @@ footer {
     background: var(--clr-darkGrey);
     color: var(--clr-offWhite);
     font-family: 'Poppins', sans-serif;
-    padding: 1rem 2.5rem;
+    padding: 1.75rem 2.5rem;
 }
 footer .grid-container {
     display: grid;
