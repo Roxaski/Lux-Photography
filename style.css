@@ -500,6 +500,9 @@ footer .quick-links ul li {
     .hero-section .title {
         margin: 50px auto;
     }
+    #discover .img-wrapper:hover img.zoom {
+        transform: scale(1);
+    }
     footer {
         padding: 1rem 1.5rem;
     }
