@@ -524,6 +524,8 @@ footer .quick-links ul li {
     }
     #ad_banner .img-wrapper #mobile_banner {
         display: block;
+        width: 100%;
+        height: auto;
     }
     #price-icons .grid-container {
         grid-template-columns: repeat(1, 1fr);
