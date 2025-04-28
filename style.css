@@ -263,14 +263,6 @@ section {
     text-decoration: none;
     cursor: pointer;
 }
-/*AD BANNER*/
-#ad_banner .img-wrapper img {
-    width: 100%;
-    height: auto;
-}
-#ad_banner .img-wrapper #mobile_banner {
-    display: none;
-}
 /*PRICE ICONS*/
 #price-icons {
     margin: 50px auto;
@@ -519,14 +511,6 @@ footer .quick-links ul li {
     #discover .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
-    #ad_banner .img-wrapper #desktop_banner {
-        display: none;
-    }
-    #ad_banner .img-wrapper #mobile_banner {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
     #price-icons .grid-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 7rem;
@@ -596,9 +580,6 @@ footer .quick-links ul li {
     }
     .hero-section img {
         color: var(--clr-white);
-    }
-    #ad_banner .img-wrapper img {
-        border: solid 2px var(--clr-grey);
     }
     #memories .grid-container .img-wrapper img {
         border: solid 2px var(--clr-grey);
