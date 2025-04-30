@@ -8,7 +8,7 @@
     --clr-white: #fff;
     --clr-offWhite: #f8f8f8;
     --clr-grey: #c4c4c4;
-    --clr-lightGrey: #b7b6b6;
+    --clr-lightGrey: #807f7f;
     --clr-darkGrey: #313030;
 }
 body {
@@ -175,7 +175,6 @@ nav.active .hamburger-menu .bars::after {
     color: var(--clr-darkGrey);
     background-color: var(--clr-white);
     transition: 250ms ease-in-out;
-    cursor: pointer;
 }
 .right .contact-form input[type="button"]:hover {
     color: var(--clr-white);

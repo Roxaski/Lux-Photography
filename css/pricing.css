@@ -180,7 +180,6 @@ nav.active .hamburger-menu .bars::after {
     letter-spacing: 1px;
     font-weight: 400;
     transition: 250ms ease-in-out;
-    cursor: pointer;
 }
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {

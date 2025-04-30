@@ -284,7 +284,7 @@ section {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: linear-gradient(0deg, rgb(197, 126, 50) 0%, rgb(222, 78, 104) 100%);
+    background-image: linear-gradient(0deg, rgb(238, 142, 40) 0%, rgb(222, 78, 104) 100%);
 }
 #price-icons .grid-container .left,
 #price-icons .grid-container .center,
