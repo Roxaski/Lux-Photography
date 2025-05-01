@@ -176,10 +176,6 @@ nav.active .hamburger-menu .bars::after {
     background-color: var(--clr-white);
     transition: 250ms ease-in-out;
 }
-.right .contact-form input[type="button"]:hover {
-    color: var(--clr-white);
-    background-color: var(--clr-lightGrey);
-}
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {
     .no-scroll {
