@@ -124,7 +124,6 @@ nav.active .hamburger-menu .bars::after {
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     transition: 250ms ease-in-out;
-    cursor: pointer;
 }
 .card:hover {
     height: 375px;
