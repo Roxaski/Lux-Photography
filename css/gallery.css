@@ -142,7 +142,7 @@ nav.active .hamburger-menu .bars::after {
 }
 .lightbox img {
     display: none;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     cursor: default;
 }
@@ -243,10 +243,6 @@ nav.active .hamburger-menu .bars::after {
 @media screen and (orientation: landscape) and (max-width: 960px) {
     .lightbox {
         width: 80%;
-    }
-    .lightbox img {
-        max-width: 100%;
-        margin: 0 auto;
     }
     .lightbox .btn i {
         display: none;
