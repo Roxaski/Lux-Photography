@@ -241,6 +241,9 @@ nav.active .hamburger-menu .bars::after {
     }
 }
 @media screen and (orientation: landscape) and (max-width: 960px) {
+    .lightbox {
+        width: 80%;
+    }
     .lightbox img {
         max-width: 100%;
         margin: 0 auto;
