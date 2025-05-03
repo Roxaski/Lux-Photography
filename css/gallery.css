@@ -240,6 +240,15 @@ nav.active .hamburger-menu .bars::after {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+@media screen and (orientation: landscape) and (max-width: 960px) {
+    .lightbox img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .lightbox .btn i {
+        display: none;
+    }
+}
 @media screen and (orientation: landscape) and (max-width: 935px) {
     .links ul li {
         padding: 1.1rem;
