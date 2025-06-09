@@ -168,6 +168,9 @@ nav.active .hamburger-menu .bars::after {
     padding-top: .25rem;
 }
 .right .contact-form input[type="button"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: clamp(.8rem, 3vw, .9rem);
     font-weight: 400;
     letter-spacing: .5px;
