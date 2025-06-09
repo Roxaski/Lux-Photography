@@ -43,21 +43,19 @@
             <div class="content-wrapper">
                 <!--CONTACT FORM IMAGE-->
                 <div class="left">
-                    <img width="2560" height="1440" src="../assets/contact_graphic.webp" alt="colors and camera lens">
+                    <img fetchpriority="high" width="2560" height="1440" src="../assets/contact_graphic.webp" alt="colors and camera lens">
                 </div>
                 <!--CONTACT FORM DETAILS-->
                 <div class="right">
                     <h1>contact form</h1>
                     <div class="contact-form">
-                        <input id="name" type="text" placeholder="Name">
-                        <label for="name"></label>
-                        <input id="email" type="text" placeholder="Email">
-                        <label for="email"></label>
-                        <input id="phone" type="text" placeholder="Phone Number">
-                        <label for="phone"></label>
-                        <textarea id="message" placeholder="Insert your message here"></textarea>
-                        <label for="message"></label>
-                        <input style="outline:none" type="button" value="SUBMIT">
+                        <form>
+                            <input name="name" type="text" placeholder="Name" autocomplete="off">
+                            <input name="email" type="text" placeholder="Email" autocomplete="off">
+                            <input name="phone number" type="text" placeholder="Phone Number" autocomplete="off">
+                            <textarea name="user message" placeholder="Insert your message here"></textarea>
+                            <input style="outline:none" type="button" value="SUBMIT">
+                        </form>
                     </div>
                 </div>
             </div>
