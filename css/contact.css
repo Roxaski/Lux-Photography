@@ -142,10 +142,6 @@ nav.active .hamburger-menu .bars::after {
     display: flex;
     flex-direction: column;
 }
-.right .contact-form input:focus,
-.right .contact-form textarea:focus {
-    outline: solid 2px #ea9132;
-}
 .right .contact-form input,
 .right .contact-form textarea {
     width: 100%;
