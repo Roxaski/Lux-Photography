@@ -102,7 +102,7 @@ body {
     height: 70%;
     width: 100%;
     border-radius: 5px;
-    background-color: var(--clr-darkGrey);
+    background-color: var(--clr-white);
     transition: 350ms ease;
 }
 .bars::before {
@@ -187,7 +187,9 @@ nav.active .hamburger-menu .bars::after {
         align-items: center;
         justify-content: flex-start;
         font-family: 'Poiret One', sans-serif;
-        margin: .5rem 0 0 1rem;
+        background: var(--clr-darkGrey);
+        margin: 0 auto;
+        padding: .75rem;
     }
     .mobile-header img {
         position: relative;
@@ -201,7 +203,7 @@ nav.active .hamburger-menu .bars::after {
         font-size: clamp(1.5rem, 3vw, 1.75rem);
     }
     .mobile-header a {
-        color: var(--clr-blk);
+        color: var(--clr-white);
         text-decoration: none;
     }
     nav.active .links {
