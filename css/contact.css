@@ -163,20 +163,19 @@ nav.active .hamburger-menu .bars::after {
     resize: none;
     padding-top: .25rem;
 }
-.right .contact-form input[type="button"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(.8rem, 3vw, .9rem);
-    font-weight: 400;
+.right .contact-form button {
+    display: block;
+    margin: 3px auto 10px;
+    width: 100%;
+    padding: .48rem;
     letter-spacing: .5px;
-    margin: 5px auto;
-    min-width: 30%;
-    max-width: 35%;
-    border-radius: 5px;
-    color: var(--clr-darkGrey);
+    color: var(--clr-blk);
     background-color: var(--clr-white);
-    transition: 250ms ease-in-out;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    transition: 250ms ease-out;
 }
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {
@@ -188,12 +187,21 @@ nav.active .hamburger-menu .bars::after {
         overflow: auto;
     }
     .mobile-header {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         font-family: 'Poiret One', sans-serif;
-        margin: .75rem 0 0 1rem;
+        margin: .5rem 0 0 1rem;
+    }
+    .mobile-header img {
+        position: relative;
+        top: .35rem;
+        right: .5rem;
+        width: 35px;
+        height: auto;
     }
     .mobile-header h1 {
-        font-weight: 300;
+        font-weight: 500;
         font-size: clamp(1.5rem, 3vw, 1.75rem);
     }
     .mobile-header a {
@@ -242,9 +250,6 @@ nav.active .hamburger-menu .bars::after {
         grid-template-columns: repeat(1, 1fr);
         max-width: 700px;
     }
-    .right .contact-form input[type="button"] {
-        margin: 10px auto 15px;
-    }
 }
 @media screen and (orientation: landscape) and (max-width: 935px) {
     .links ul li {
@@ -287,9 +292,6 @@ nav.active .hamburger-menu .bars::after {
     }
     .right .contact-form input,
     .right .contact-form textarea {
-        background-color: var(--clr-offWhite);
-    }
-    .right .contact-form input[type="button"] {
         background-color: var(--clr-offWhite);
     }
 }
