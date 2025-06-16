@@ -115,13 +115,13 @@ nav.active .hamburger-menu .bars::after {
     gap: 1rem;
     width: 800px;
     font-family: 'Poppins', sans-serif;
-    margin: 45px auto;
+    margin: 50px auto;
 }
 .card {
     position: relative;
     background-color: var(--clr-white);
     border-radius: 5px;
-    box-shadow: 2px 1px 10px rgba(0, 0, 0, .4);
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, .5);
 }
 .card .title {
     border-radius: 5px;
@@ -130,7 +130,9 @@ nav.active .hamburger-menu .bars::after {
     padding: 2rem;
     color: var(--clr-offWhite);
     background: #c57e32;
-    background: linear-gradient(0deg, rgb(197, 126, 50) 0%, rgb(222, 78, 104) 100%);
+    background: linear-gradient(0deg, 
+    rgb(197, 126, 50) 0%, 
+    rgb(222, 78, 104) 100%);
 }
 .card .title h1 {
     font-size: clamp(1rem, 3vw, 1.1rem);
@@ -146,9 +148,8 @@ nav.active .hamburger-menu .bars::after {
 }
 .card .price h2 {
     color: var(--clr-midGrey);
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
-    font-weight: 400;
-    letter-spacing: 1.5px;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 500;
     margin: 25px auto 0;
     text-align: center;
 }
@@ -164,7 +165,7 @@ nav.active .hamburger-menu .bars::after {
     padding: 3rem 2rem;
 }
 .card .list ul li {
-    font-weight: 300;
+    font-weight: 400;
     font-size: clamp(.9rem, 3vw, 1rem);
     text-transform: capitalize;
     letter-spacing: .5px;
@@ -178,10 +179,13 @@ nav.active .hamburger-menu .bars::after {
     border-radius: 2px;
     padding: .5rem;
     color: var(--clr-white);
-    background: linear-gradient(175deg, rgb(197, 126, 50) 25%, rgb(222, 78, 104) 90%);
+    background: linear-gradient(175deg, 
+    rgb(197, 126, 50) 25%, 
+    rgb(222, 78, 104) 90%);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
+    font-size: .95rem;
     transition: 250ms ease-in-out;
 }
 /*MEDIA QUERY'S*/
@@ -194,12 +198,21 @@ nav.active .hamburger-menu .bars::after {
         overflow: auto;
     }
     .mobile-header {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         font-family: 'Poiret One', sans-serif;
-        margin: .75rem 0 0 1rem;
+        margin: .5rem 0 0 1rem;
+    }
+    .mobile-header img {
+        position: relative;
+        top: .35rem;
+        right: .5rem;
+        width: 35px;
+        height: auto;
     }
     .mobile-header h1 {
-        font-weight: 300;
+        font-weight: 500;
         font-size: clamp(1.5rem, 3vw, 1.75rem);
     }
     .mobile-header a {
@@ -310,7 +323,9 @@ nav.active .hamburger-menu .bars::after {
     }
     .card .title {
         background: #c57e32;
-        background: linear-gradient(0deg, rgb(197, 126, 50) 0%, rgb(186, 68, 90) 100%);
+        background: linear-gradient(0deg, 
+        rgb(197, 126, 50) 0%, 
+        rgb(186, 68, 90) 100%);
     }
     .card .price h2 {
         color: var(--clr-offWhite);
