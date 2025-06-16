@@ -112,7 +112,7 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 100px auto;
+    margin: 75px auto;
 }
 .card {
     display: flex;
@@ -210,12 +210,21 @@ nav.active .hamburger-menu .bars::after {
         overflow: auto;
     }
     .mobile-header {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
         font-family: 'Poiret One', sans-serif;
-        margin: .75rem 0 0 1rem;
+        margin: .5rem 0 0 1rem;
+    }
+    .mobile-header img {
+        position: relative;
+        top: .35rem;
+        right: .5rem;
+        width: 35px;
+        height: auto;
     }
     .mobile-header h1 {
-        font-weight: 300;
+        font-weight: 500;
         font-size: clamp(1.5rem, 3vw, 1.75rem);
     }
     .mobile-header a {
@@ -263,6 +272,7 @@ nav.active .hamburger-menu .bars::after {
     .content-wrapper {
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem 0;
+        margin: 100px auto;
     }
     .card {
         height: 375px;
