@@ -128,7 +128,8 @@ nav.active .hamburger-menu .bars::after {
     font-family: 'Poppins', sans-serif;
     transition: 250ms ease-in-out;
 }
-.card:hover {
+.card:hover,
+.card.active {
     height: 375px;
 }
 .card .more-info {
@@ -165,8 +166,9 @@ nav.active .hamburger-menu .bars::after {
     transition: 250ms ease-in-out;
     overflow: hidden;
 }
-.card:hover .img-container {
-    top: -25px;
+.card:hover .img-container,
+.card.active .img-container {
+    transform: translateZ(0) translateY(-45px);
 }
 .card .img-container img {
     position: absolute;
@@ -186,8 +188,10 @@ nav.active .hamburger-menu .bars::after {
     padding: 0 2rem;
     transition: 250ms ease;
 }
-.card:hover .content {
-    top: 150px;
+.card:hover .content,
+.card.active .content {
+    opacity: 1;
+    transform: translateZ(0) translateY(20px);
     overflow: hidden;
 }
 .card .content p {
@@ -195,27 +199,14 @@ nav.active .hamburger-menu .bars::after {
     line-height: 1.6;
     font-weight: 300;
     opacity: 0;
-    transition: 100ms ease-in-out all;
+    transition: 250ms ease-in-out all;
 }
-.card:hover .content p {
+.card:hover .content p,
+.card.active .content p {
     opacity: 1;
-}
-.card.active {
-    height: 375px;
 }
 .card.active .more-info {
     opacity: 0;
-}
-.card.active .img-container {
-    top: -25px;
-}
-.card.active .content {
-    top: 150px;
-    opacity: 1;
-    overflow: hidden;
-}
-.card.active .content p {
-    opacity: 1;
 }
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {
@@ -304,10 +295,10 @@ nav.active .hamburger-menu .bars::after {
         opacity: 0;
     }
     .card .img-container:not(.active) {
-        top: 20px;
+        transform: translateZ(0) translateY(0);
     }
     .card.active .img-container {
-        top: -25px;
+        transform: translateZ(0) translateY(-45px);
     }
     .card .content p:not(.active) {
         opacity: 0;
