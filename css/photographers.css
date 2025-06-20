@@ -199,7 +199,7 @@ nav.active .hamburger-menu .bars::after {
     line-height: 1.6;
     font-weight: 300;
     opacity: 0;
-    transition: 250ms ease-in-out all;
+    transition: 100ms ease-in-out all;
 }
 .card:hover .content p,
 .card.active .content p {
