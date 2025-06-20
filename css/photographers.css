@@ -112,7 +112,7 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 75px auto;
+    margin: 100px auto;
 }
 .card {
     display: flex;
@@ -200,6 +200,23 @@ nav.active .hamburger-menu .bars::after {
 .card:hover .content p {
     opacity: 1;
 }
+.card.active {
+    height: 375px;
+}
+.card.active .more-info {
+    opacity: 0;
+}
+.card.active .img-container {
+    top: -25px;
+}
+.card.active .content {
+    top: 150px;
+    opacity: 1;
+    overflow: hidden;
+}
+.card.active .content p {
+    opacity: 1;
+}
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {
     .no-scroll {
@@ -221,11 +238,12 @@ nav.active .hamburger-menu .bars::after {
     .mobile-header img {
         position: relative;
         top: .35rem;
-        right: .5rem;
         width: 35px;
         height: auto;
     }
     .mobile-header h1 {
+        position: relative;
+        left: .5rem;
         font-weight: 500;
         font-size: clamp(1.5rem, 3vw, 1.75rem);
     }
@@ -274,36 +292,34 @@ nav.active .hamburger-menu .bars::after {
     .content-wrapper {
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem 0;
-        margin: 100px auto;
+        margin: 75px auto;
     }
-    .card {
-        height: 375px;
+    .card:not(.active) {
+        height: 300px;
     }
-    .card .img-container {
-        position: absolute;
-        top: -25px;
-    }
-    .card .content {
-        padding: 0 1.5rem;
-    }
-    .card:hover .content {
-        top: 130px;
-    }
-    .card .content p {
+    .card .more-info:not(.active) {
         opacity: 1;
     }
-    .card .more-info {
-        display: none;
+    .card.active .more-info {
+        opacity: 0;
+    }
+    .card .img-container:not(.active) {
+        top: 20px;
+    }
+    .card.active .img-container {
+        top: -25px;
+    }
+    .card .content p:not(.active) {
+        opacity: 0;
+    }
+    .card.active .content p {
+        opacity: 1;
     }
 }
 @media screen and (max-width: 973px) {
     .content-wrapper {
         grid-template-columns: repeat(2, 1fr);
     }
-    .card .content {
-        margin: 10px auto;
-    }
-    
 }
 @media screen and (max-width: 695px) {
     .content-wrapper {
