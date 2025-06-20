@@ -194,11 +194,12 @@ nav.active .hamburger-menu .bars::after {
     .mobile-header img {
         position: relative;
         top: .35rem;
-        right: .5rem;
         width: 35px;
         height: auto;
     }
     .mobile-header h1 {
+        position: relative;
+        left: .5rem;
         font-weight: 500;
         font-size: clamp(1.5rem, 3vw, 1.75rem);
     }
@@ -245,7 +246,7 @@ nav.active .hamburger-menu .bars::after {
         display: flex;
     }
     .content-wrapper {
-        margin: 100px auto;
+        margin: 75px auto;
     }
 }
 @media screen and (max-width: 865px) {
