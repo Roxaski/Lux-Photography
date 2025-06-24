@@ -320,16 +320,15 @@ section {
     justify-content: center;
     flex-direction: column;
 }
-#memories .content h2,
-#memories .content h3 {
-    font-weight: 300;
+#memories .content h2 {
+    font-weight: 400;
     text-transform: capitalize;
     letter-spacing: .25px;
 }
 #memories .content h2 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
-#memories .content h3 {
+#memories .content h2:nth-child(2) {
     font-size: clamp(1rem, 3vw, 1.2rem);
 }
 #memories .content p {
@@ -402,9 +401,10 @@ footer .grid-container {
     align-content: center;
     justify-content: center;
 }
-footer h3 {
+footer h2 {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(.8rem, 3vw, .9rem);
+    font-weight: 600;
     letter-spacing: .5px;
     line-height: 2;
     text-transform: uppercase;
