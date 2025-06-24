@@ -17,11 +17,9 @@ body {
     background-color: var(--clr-offWhite);
     color: var(--clr-blk);
     cursor: default;
-    overflow: hidden;
 }
 .wrapper {
     max-width: 90rem;
-    padding-bottom: .5rem;
 }
 /*LINKS*/
 .mobile-header {
@@ -188,6 +186,55 @@ nav.active .hamburger-menu .bars::after {
     font-size: .95rem;
     transition: 250ms ease-in-out;
 }
+/*FOOTER*/
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background: var(--clr-darkGrey);
+    color: var(--clr-offWhite);
+    font-family: 'Poppins', sans-serif;
+    padding: 1.75rem 2.5rem;
+}
+footer .grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 5rem;
+    align-content: center;
+    justify-content: center;
+}
+footer h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(.8rem, 3vw, .9rem);
+    font-weight: 600;
+    letter-spacing: .5px;
+    line-height: 2;
+    text-transform: uppercase;
+}
+footer .about p {
+    font-size: clamp(.8rem, 3vw, .85rem);
+    letter-spacing: .25px;
+    line-height: 1.6;
+    margin-top: .5rem;
+    width: 95%;
+}
+footer .about ul {
+    display: flex;
+    margin-top: 1rem;
+}
+footer ul li {
+    list-style: none;
+}
+footer .about ul li i {
+    margin-right: 2rem;
+}
+footer .quick-links ul li {
+    text-transform: capitalize;
+    margin-top: .5rem;
+    font-weight: 300;
+    letter-spacing: .5px;
+    font-size: clamp(.85rem, 3vw, .9rem);
+}
 /*MEDIA QUERY'S*/
 @media screen and (max-width: 1195px) {
     .no-scroll {
@@ -263,12 +310,27 @@ nav.active .hamburger-menu .bars::after {
     .content-wrapper {
         margin: 75px auto;
     }
+    footer .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 990px) {
+    footer {
+        padding: 1rem 1.5rem;
+    }
 }
 @media screen and (max-width: 843px) {
     .content-wrapper {
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
         gap: 2rem;
+    }
+}
+@media screen and (max-width: 725px) {
+    footer .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem 10rem;
     }
 }
 @media screen and (max-width: 658px) {
