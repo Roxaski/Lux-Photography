@@ -112,7 +112,7 @@ nav.active .hamburger-menu .bars::after {
     grid-template-columns: repeat(2, 1fr);
     background: var(--clr-darkGrey);
     width: 80%;
-    margin: 100px auto;
+    margin: 110px auto;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
 }
