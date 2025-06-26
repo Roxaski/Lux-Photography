@@ -31,6 +31,8 @@ body {
 .links ul {
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    right: .75rem;
 }
 .links ul li {
     display: inline-block;
@@ -117,7 +119,6 @@ nav.active .hamburger-menu .bars::after {
     align-items: center;
     justify-content: center;
     position: relative;
-    border: var(--clr-grey) 2px solid;
     background: var(--clr-white);
     border-radius: 5px;
     width: 250px;
@@ -125,6 +126,7 @@ nav.active .hamburger-menu .bars::after {
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     transition: 250ms ease-in-out;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .3);
 }
 .card:hover,
 .card.active {
@@ -149,10 +151,11 @@ nav.active .hamburger-menu .bars::after {
     font-weight: 300;
     font-size: .8rem;
 }
-.card:hover .more-info {
+.card:hover .more-info,
+.card.active .more-info {
     opacity: 0;
 }
-.card i {
+.card .more-info i {
     color: var(--clr-lightGrey);
 }
 .card .img-container {
@@ -163,6 +166,7 @@ nav.active .hamburger-menu .bars::after {
     border-radius: 5px;
     transition: 250ms ease-in-out;
     overflow: hidden;
+    z-index: 1;
 }
 .card:hover .img-container,
 .card.active .img-container {
@@ -175,9 +179,8 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
     font-family: 'Poppins', sans-serif;
-    border: 2px solid var(--clr-grey);
-    z-index: 1;
 }
 .card .content {
     position: absolute;
@@ -197,14 +200,11 @@ nav.active .hamburger-menu .bars::after {
     line-height: 1.6;
     font-weight: 300;
     opacity: 0;
-    transition: 100ms ease-in-out all;
+    transition: 100ms ease-in-out;
 }
 .card:hover .content p,
 .card.active .content p {
     opacity: 1;
-}
-.card.active .more-info {
-    opacity: 0;
 }
 /*FOOTER*/
 footer {
@@ -308,6 +308,7 @@ footer .quick-links ul li {
     .links ul {
         position: relative;
         flex-direction: column;
+        right: 0;
     }
     .links ul li {
         padding: 1.75rem;
@@ -326,18 +327,26 @@ footer .quick-links ul li {
         display: flex;
     }
     .content-wrapper {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4rem 0;
-        margin: 75px auto;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 130px auto;
+        gap: 8rem 0;
     }
-    .card:not(.active) {
-        height: 300px;
+    .card {
+        height: 200px;
+    }
+    .card:hover,
+    .card.active {
+        width: 450px;
+        height: 200px;
+    }
+    .card .more-info {
+        top: 7.2rem;
     }
     .card .more-info:not(.active) {
         opacity: 1;
     }
-    .card.active .more-info {
-        opacity: 0;
+    .card .img-container {
+        top: -50px;
     }
     .card .img-container:not(.active) {
         transform: translateZ(0) translateY(0);
@@ -345,11 +354,37 @@ footer .quick-links ul li {
     .card.active .img-container {
         transform: translateZ(0) translateY(-45px);
     }
+    .card .content {
+        position: relative;
+        top: 5px;
+        padding: 0;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .card.active .content {
+        opacity: 1;
+        top: 10px;
+        max-height: 100px;
+        width: 100%;
+    }
+    .card.active .more-info {
+        opacity: 0;
+    }
+    .card:not(.active) {
+        width: 300px;
+    }
+    .card .content p {
+        margin: 0 auto;
+        width: 90%;
+        transition: none;
+    }
     .card .content p:not(.active) {
         opacity: 0;
     }
     .card.active .content p {
         opacity: 1;
+        transition: opacity 250ms ease-in-out 150ms;
     }
     footer {
         position: relative;
@@ -365,9 +400,9 @@ footer .quick-links ul li {
         padding: 1rem 1.5rem;
     }
 }
-@media screen and (max-width: 973px) {
+@media screen and (max-width: 940px) {
     .content-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media screen and (max-width: 725px) {
@@ -376,14 +411,18 @@ footer .quick-links ul li {
         gap: 3rem 10rem;
     }
 }
-@media screen and (max-width: 695px) {
+@media screen and (max-width: 505px) {
     .content-wrapper {
-        grid-template-columns: repeat(1, 1fr);
+        gap: 10rem 0;
     }
-}
-@media screen and (max-width: 385px) {
-    .content-wrapper {
-        padding: 0;
+    .card {
+        max-width: 80%;
+    }
+    .card.active {
+        width: 300px;
+    }
+    .card.active .content {
+        overflow-y: auto;
     }
 }
 @media screen and (orientation: landscape) and (max-width: 935px) {
@@ -423,11 +462,9 @@ footer .quick-links ul li {
         background-color: var(--clr-grey);
     }
     .card {
-        border: var(--clr-grey) 2px solid;
         background: var(--clr-darkGrey);
     }
     .card .img-container img {
         color: var(--clr-offWhite);
-        border: 2px solid var(--clr-grey);
     }
 }
