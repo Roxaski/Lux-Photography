@@ -133,6 +133,7 @@ nav.active .hamburger-menu .bars::after {
     height: auto;
     color: var(--clr-blk);
     cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 .lightbox {
     position: fixed;

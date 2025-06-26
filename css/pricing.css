@@ -121,7 +121,7 @@ nav.active .hamburger-menu .bars::after {
     position: relative;
     background-color: var(--clr-white);
     border-radius: 5px;
-    box-shadow: 1px 1px 7px rgba(0, 0, 0, .5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 .card .title {
     border-radius: 5px;
@@ -138,7 +138,6 @@ nav.active .hamburger-menu .bars::after {
     font-size: clamp(1rem, 3vw, 1.1rem);
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: .5px;
     text-align: center;
 }
 .card .title h1:nth-child(2) {
@@ -156,7 +155,6 @@ nav.active .hamburger-menu .bars::after {
 .card .price h3 {
     font-size: clamp(1rem, 3vw, 1.1rem);
     font-weight: 400;
-    letter-spacing: 1px;
     text-transform: capitalize;
     text-align: center;
 }
@@ -176,7 +174,6 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
     margin: 0 auto;
     border: none;
-    border-radius: 2px;
     padding: .5rem;
     color: var(--clr-white);
     background: linear-gradient(175deg, 
@@ -386,7 +383,6 @@ footer .quick-links ul li {
     .card {
         color: var(--clr-offWhite);
         background-color: var(--clr-darkGrey);
-        box-shadow: none;
     }
     .card .title {
         background: #c57e32;
