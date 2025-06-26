@@ -584,11 +584,8 @@ footer .quick-links ul li {
     .hero-section img {
         color: var(--clr-white);
     }
-    #memories .grid-container .img-wrapper img {
-        border: solid 2px var(--clr-grey);
-    }
     #image-edit .img-wrapper {
-        border: solid 2px var(--clr-grey);
+        border: solid 1.5px var(--clr-grey);
     }
     #image-edit .img-wrapper p {
         color: var(--clr-offWhite);
