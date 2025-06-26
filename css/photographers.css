@@ -197,7 +197,7 @@ nav.active .hamburger-menu .bars::after {
 }
 .card .content p {
     font-size: clamp(.95rem, 3vw, 1rem);
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 300;
     opacity: 0;
     transition: 100ms ease-in-out;
