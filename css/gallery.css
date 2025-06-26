@@ -41,6 +41,8 @@ body {
 .links ul {
     display: flex;
     justify-content: flex-end;
+    position: relative;
+    right: .75rem;
 }
 .links ul li {
     display: inline-block;
@@ -276,6 +278,7 @@ footer .quick-links ul li {
     .links ul {
         position: relative;
         flex-direction: column;
+        right: 0;
     }
     .links ul li {
         padding: 1.75rem;
