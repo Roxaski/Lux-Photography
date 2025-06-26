@@ -383,7 +383,6 @@ footer .quick-links ul li {
     .card {
         color: var(--clr-offWhite);
         background-color: var(--clr-darkGrey);
-        border: solid 2px var(--clr-grey);
         box-shadow: none;
     }
     .card .title {
