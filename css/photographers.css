@@ -353,7 +353,7 @@ footer .quick-links ul li {
         transform: translateY(0);
     }
     .card.active .img-container {
-        transform: translateY(-45px) translateZ(0);
+        transform: translateY(-45px);
     }
     .card .content {
         position: relative;
