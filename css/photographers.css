@@ -170,7 +170,7 @@ nav.active .hamburger-menu .bars::after {
 }
 .card:hover .img-container,
 .card.active .img-container {
-    transform: translateZ(0) translateY(-45px);
+    transform: translateY(-45px);
 }
 .card .img-container img {
     position: absolute;
@@ -192,7 +192,7 @@ nav.active .hamburger-menu .bars::after {
 .card:hover .content,
 .card.active .content {
     opacity: 1;
-    transform: translateZ(0) translateY(20px);
+    transform: translateY(20px);
     overflow: hidden;
 }
 .card .content p {
@@ -349,10 +349,10 @@ footer .quick-links ul li {
         top: -50px;
     }
     .card .img-container:not(.active) {
-        transform: translateZ(0) translateY(0);
+        transform: translateY(0);
     }
     .card.active .img-container {
-        transform: translateZ(0) translateY(-45px);
+        transform: translateY(-45px) translateZ(0);
     }
     .card .content {
         position: relative;
@@ -396,6 +396,9 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 990px) {
+    .card.active {
+        width: 400px;
+    }
     footer {
         padding: 1rem 1.5rem;
     }
