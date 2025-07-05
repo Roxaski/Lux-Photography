@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="We aim to capture the most beautiful moments in time, never miss a moment with our professional Photography">
+    <meta name="description" content="Capture the most beautiful moments in time, we make sure you never miss a moment with Lux Photography">
     <meta name="theme-color" content="#313030">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Lux Photography"/>
+    <meta property="og:title" content="Lux Photography | Innovation at your fingertips">
+    <meta property="og:description" content="Capture the most beautiful moments in time, we make sure you never miss a moment with Lux Photography">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Roxaski/Lux-Photography/main/assets/open_graph/og_index.jpg">
+    <meta property="og:image:alt" content="Lux Photography">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://roxaski.github.io/Lux-Photography/"/>
+    <meta property="og:type" content="website"/>
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -37,7 +47,14 @@
         </header>
         <!--HERO SECTION-->
         <div class="hero-section">
-            <img fetchpriority="high" width="1920" height="1080" draggable="false" src="./assets/main/bg.webp" alt="arizona desert night sky">
+            <img fetchpriority="high" width="1920" height="1080" draggable="false" 
+            src="./assets/index/hero_extra_large.webp" 
+            srcset="./assets/index/hero_small.webp 480w,
+                    ./assets/index/hero_medium.webp 800w,
+                    ./assets/index/hero_large.webp 1200w,
+                    ./assets/index/hero_extra_large.webp 1920w"
+            sizes="100vw"
+            alt="arizona desert night sky">
             <div class="title">
                 <h1 id="fade_in_animation_one">lux Photography</h1>
                 <h1 id="fade_in_animation_two">Innovation at your fingertips</h1>
@@ -49,13 +66,24 @@
             <section id="photographers">
                 <div class="grid-container">
                     <div class="img-wrapper">
-                        <img width="1600" height="1080" fetchpriority="high" draggable="false" src="./assets/main/layers.webp" alt="girl holding photography camera">
+                        <img width="1920" height="1080" fetchpriority="high" draggable="false" 
+                    src="./assets/index/photographer_extra_large.webp" 
+                    srcset="./assets/index/photographer_small.webp 480w,
+                            ./assets/index/photographer_medium.webp 800w,
+                            ./assets/index/photographer_large.webp 1200w,
+                            ./assets/index/photographer_extra_large.webp 1920w"
+                    sizes="(max-width: 1195px) calc(100vw - 1rem),
+                           (max-width: 1440px) calc(50vw - 2rem),
+                           680px"
+                    alt="girl holding photography camera">
                     </div>
                     <div class="content">
                         <h2>professional photographers</h2>
                         <p>We have some of the absolute most incredible photographers working with us at Lux. With years of experience under their belt and thousands of incredible photos taken, they know how to capture the beauty in every snapshot they take.</p>
-                        <p>Offering a wide variety of photography, each one of our professionals is a veteran in a variety of styles from nature shots to beautiful wedding images.</p>
-                        <p>With a great eye for detail, we promise to deliver the most impressive and high quality photographs you have ever seen.</p>
+
+                        <p>All of our professional photographers are highly qualified to capture any moment you want to keep forever. Each one of them specialises in delivering the utmost quality in any given field.</p>
+
+                        <p>They cover anything from micro photography to weddings and so much more. Check out our photographers page to learn more about them.</p>
                     </div>
                 </div>
             </section>
@@ -63,15 +91,39 @@
             <section id="discover">
                 <div class="grid-container">
                     <div class="img-wrapper">
-                        <img class="zoom" width="2560" height="1440" loading="lazy" draggable="false" src="./assets/main/discover_one.webp" alt="girl holding lantern walking through wheat field">
+                        <img class="zoom" width="1920" height="1080" loading="lazy" draggable="false"
+                        src="./assets/index/discover_gallery_extra_large.webp"
+                        srcset="./assets/index/discover_gallery_small.webp 480w,
+                                ./assets/index/discover_gallery_medium.webp 800w,
+                                ./assets/index/discover_gallery_large.webp 1200w,
+                                ./assets/index/discover_gallery_extra_large.webp 1920w"
+                        sizes="(max-width: 725px) calc(100vw - 1rem),
+                               (max-width: 1440px) calc(50vw - 2rem),
+                               680px"
+                        alt="girl walking through wheat field">
                         <div class="content">
-                            <a role="button" aria-label="opens the image gallery page" href="./pages/gallery.html"><p><span>discover</span>image gallery</p></a>
+                            <a tabindex="0" aria-label="opens the gallery page" href="./pages/gallery.html">
+                                <span>discover</span>
+                                <span>gallery</span>
+                            </a>
                         </div>
                     </div>
                     <div class="img-wrapper">
-                        <img class="zoom" width="2560" height="1440" loading="lazy" draggable="false" src="assets/main/discover_two.webp" alt="bee pollinating flower">
+                        <img class="zoom" width="1920" height="1080" loading="lazy" draggable="false" 
+                        src="./assets/index/discover_photographers_extra_large.webp" 
+                        srcset="./assets/index/discover_photographers_small.webp 480w,
+                                ./assets/index/discover_photographers_medium.webp 800w,
+                                ./assets/index/discover_photographers_large.webp 1200w,
+                                ./assets/index/discover_photographers_extra_large.webp 1920w"
+                        sizes="(max-width: 725px) calc(100vw - 1rem),
+                               (max-width: 1440px) calc(50vw - 2rem),
+                               680px"
+                        alt="bee pollinating flower">
                         <div class="content">
-                            <a role="button" aria-label="opens the photographers page" href="./pages/photographers.html"><p><span>discover</span>photographers</p></a>
+                            <a tabindex="0" aria-label="opens the photographers page" href="./pages/photographers.html">
+                                <span>discover</span>
+                                <span>photographers</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -100,14 +152,27 @@
             <section id="memories">
                 <div class="grid-container">
                     <div class="img-wrapper">
-                        <img width="2560" height="1440" loading="lazy" draggable="false" src="./assets/main/polaroid_stack.webp" alt="stack of polaroid images">
+                        <img width="1920" height="1080" loading="lazy" draggable="false" 
+                        src="./assets/index/collage_extra_large.webp"
+                        srcset="./assets/index/collage_small.webp 480w,
+                        ./assets/index/collage_medium.webp 800w,
+                        ./assets/index/collage_large.webp 1200w,
+                        ./assets/index/collage_extra_large.webp 1920w"
+                        sizes="(max-width: 1195px) calc(100vw - 1rem),
+                               (max-width: 1440px) calc(50vw - 2rem),
+                               680px"
+                        alt="stack of polaroid images">
                     </div>
                     <div class="content">
-                        <h2>memories</h2>
-                        <h2>cherish them with a photograph</h2>
-                        <p>Pictures are worth a thousand words, so why keep all your cherished memories in high quality photographs. We provide you with various ways of keeping your most precious memories close to you, we cater for all your needs.</p>
-                        <p>No matter the type of activity we will be on hand to capture those perfect moments in your life.</p>
-                        <p>We do all sorts of photography, if you like what you see then don't hesitate to get in touch.</p>
+                        <h2>Cherish your most precious moments</h2>
+
+                        <p>Pictures are worth a thousand words, so why not keep all of your cherished memories in high quality photographs. We provide you with various ways of keeping your most precious memories close to you.</p>
+
+                        <p>Never miss a moment to capture that perfect moment in time, that you want to keep forever. We provide you with a wide variety of options to print your photos, ranging from glossy and matte to satin and pearl.</p>
+
+                        <p>We have a wide range of photographic paper to print your photos onto such as glossy, matte and luster.</p>
+
+                        <p>Never miss a moment with Lux Photography.</p>
                     </div>
                 </div>
             </section>
@@ -115,11 +180,29 @@
             <section id="image-edit">
                 <div class="grid-container">
                     <div class="img-wrapper">
-                        <img width="2560" height="1440" loading="lazy" draggable="false" src="./assets/main/model_green_screen.webp" alt="guy in front of green screen">
+                        <img width="1920" height="1080" loading="lazy" draggable="false" 
+                        src="./assets/index/chroma_key_before_extra_large.webp"
+                        srcset="./assets/index/chroma_key_before_small.webp 480w,
+                                ./assets/index/chroma_key_before_medium.webp 800w,
+                                ./assets/index/chroma_key_before_large.webp 1200w,
+                                ./assets/index/chroma_key_before_extra_large.webp 1920w"
+                        sizes="(max-width: 725px) calc(100vw - 1rem),
+                               (max-width: 1440px) calc(50vw - 2rem),
+                               680px"
+                        alt="guy in front of green screen">
                         <p>before</p>
                     </div>
                     <div class="img-wrapper">
-                        <img width="2560" height="1440" loading="lazy" draggable="false" src="./assets/main/model_edit.webp" alt="guy in park with dog in autumn">
+                        <img width="1920" height="1080" loading="lazy" draggable="false" 
+                        src="./assets/index/chroma_key_after_extra_large.webp"
+                        srcset="./assets/index/chroma_key_after_small.webp 480w,
+                                ./assets/index/chroma_key_after_medium.webp 800w,
+                                ./assets/index/chroma_key_after_large.webp 1200w,
+                                ./assets/index/chroma_key_after_extra_large.webp 1920w"
+                        sizes="(max-width: 725px) calc(100vw - 1rem),
+                               (max-width: 1440px) calc(50vw - 2rem),
+                               680px"
+                        alt="guy in park with dog in autumn">
                         <p>after</p>
                     </div>
                     <div class="content">
