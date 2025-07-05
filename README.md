@@ -1,6 +1,6 @@
 # Lux-Photography
 
-![lux_photography](https://github.com/user-attachments/assets/530a7396-cd45-4b95-801e-71b3f05b08da)
+![github_read me](https://github.com/user-attachments/assets/1493639c-f471-4e88-9b00-ee86a7deb2dc)
 
 ## Welcome to Lux Photography
 
