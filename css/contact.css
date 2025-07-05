@@ -166,11 +166,17 @@ nav.active .hamburger-menu .bars::after {
     background-color: var(--clr-white);
     padding-left: .25rem;
     border: 1px solid transparent;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    -webkit-border-radius: 3px;
+    appearance: none;
 }
 .right .contact-form input:focus-visible,
 .right .contact-form textarea:focus-visible {
     outline: 1.5px solid var(--clr-grey);
     outline-offset: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 .right .contact-form input::placeholder,
 .right .contact-form textarea::placeholder {
@@ -192,6 +198,7 @@ nav.active .hamburger-menu .bars::after {
     border-radius: 2px;
     text-transform: uppercase;
     transition: 250ms ease-out;
+    -webkit-tap-highlight-color: transparent;
 }
 /* Footer */
 footer {
