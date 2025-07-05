@@ -195,6 +195,7 @@ nav.active .hamburger-menu .bars::after {
     letter-spacing: .5px;
     color: var(--clr-blk);
     background-color: var(--clr-white);
+    border: none;
     border-radius: 2px;
     text-transform: uppercase;
     transition: 250ms ease-out;
