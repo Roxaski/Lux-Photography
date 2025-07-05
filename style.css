@@ -15,7 +15,7 @@
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background-color: var(--clr-offWhite);
+    background-color: var(--clr-white);
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    right: .75rem;
+    right: 1rem;
 }
 .links ul li {
     display: inline-block;
@@ -134,7 +134,7 @@ nav.active .hamburger-menu .bars::after {
 .hero-section .title {
     position: absolute;
     top: 0;
-    margin: 120px;
+    margin: 120px auto;
     text-align: center;
 }
 .hero-section .title h1 {
@@ -205,6 +205,8 @@ section {
 #photographers .img-wrapper img {
     width: 100%;
     height: auto;
+    color: var(--clr-blk);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 #photographers .content h2 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
@@ -215,7 +217,7 @@ section {
 #photographers .content p {
     font-size: clamp(.95rem, 3vw, 1rem);
     font-weight: 300;
-    margin: 15px auto;
+    margin: 15px auto 0;
 }
 /*DISCOVER SECTION*/
 #discover .grid-container {
@@ -226,11 +228,13 @@ section {
 #discover .img-wrapper {
     position: relative;
     overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 #discover .img-wrapper img {
     display: block;
     max-width: 100%;
     height: auto;
+    color: var(--clr-blk);
 }
 #discover .img-wrapper img,
 #discover .img-wrapper:hover img {
@@ -239,29 +243,29 @@ section {
 #discover .img-wrapper:hover img.zoom {
     transform: scale(1.1);
 }
-#discover .content p {
+#discover .content {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     inset: 0;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: clamp(.8rem, 3vw, 1.2rem);
-    color: var(--clr-offWhite);
     background: rgba(0, 0, 0, .5);
-    letter-spacing: 3px;
 }
-#discover span {
-    position: absolute;
-    bottom: 60%;
-    font-size: clamp(.8rem, 3vw, 1.2rem);
-}
-#discover .content img a {
+#discover .content a {
     color: var(--clr-white);
     text-decoration: none;
     cursor: pointer;
+}
+#discover .content span {
+    display: block;
+    position: relative;
+    bottom: 60%;
+    font-size: clamp(.8rem, 3vw, 1.6rem);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: var(--clr-grey);
 }
 /*PRICE ICONS*/
 #price-icons {
@@ -313,6 +317,8 @@ section {
 #memories .img-wrapper img {
     width: 100%;
     height: auto;
+    color: var(--clr-blk);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 #memories .content {
     display: flex;
@@ -352,6 +358,8 @@ section {
 #image-edit .img-wrapper img {
     width: 100%;
     height: auto;
+    color: var(--clr-blk);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 #image-edit .img-wrapper p {
     position: absolute;
@@ -434,7 +442,7 @@ footer .quick-links ul li {
     font-size: clamp(.85rem, 3vw, .9rem);
 }
 /*MEDIA QUERY'S*/
-@media screen and (max-width: 1195px) {
+@media screen and (max-width: 1208px) {
     .no-scroll {
         position: fixed;
         overflow-y: hidden;
@@ -478,11 +486,8 @@ footer .quick-links ul li {
     .hamburger-menu {
         display: flex;
     }
-    .hero-section header i {
-        display: none;
-    }
     section {
-        padding: .5rem 1rem;
+        padding: 1rem;
     }
     #photographers .grid-container {
         grid-template-columns: repeat(1, 1fr);
@@ -501,6 +506,9 @@ footer .quick-links ul li {
     .hero-section .title {
         margin: 50px auto;
     }
+    #discover .grid-container {
+        grid-template-columns: 1fr;
+    }
     #discover .img-wrapper:hover img.zoom {
         transform: scale(1);
     }
@@ -509,9 +517,6 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 725px) {
-    .hero-section .title i {
-        display: none;
-    }
     #discover .grid-container {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -531,15 +536,25 @@ footer .quick-links ul li {
         gap: 3rem 10rem;
     }
 }
+@media screen and (max-width: 645px) {
+    .hero-section .title {
+        margin: 18px auto;
+    }
+}
 @media screen and (max-width: 513px) {
     .hero-section #fade_in_animation_one {
         animation: none;
     }
-    .hero-section #fade_in_animation_two {
-        display: none;
-    }
     #discover .grid-container {
         gap: .5rem;
+    }
+}
+@media screen and (max-width: 485px) {
+    .hero-section .title i {
+        display: none;
+    }
+    .hero-section #fade_in_animation_two {
+        display: none;
     }
 }
 @media screen and (max-width: 380px) {
@@ -583,6 +598,9 @@ footer .quick-links ul li {
         background-color: var(--clr-grey);
     }
     .hero-section img {
+        color: var(--clr-white);
+    }
+    #discover .img-wrapper img {
         color: var(--clr-white);
     }
     #image-edit .img-wrapper {
