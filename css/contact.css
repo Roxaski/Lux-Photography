@@ -10,6 +10,7 @@
     --clr-grey: #c4c4c4;
     --clr-lightGrey: #807f7f;
     --clr-darkGrey: #313030;
+    --clr-focusBlue: #0078d4;
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -168,13 +169,12 @@ nav.active .hamburger-menu .bars::after {
     border: 1px solid transparent;
     -webkit-tap-highlight-color: transparent;
     -webkit-appearance: none;
-    -webkit-border-radius: 3px;
     appearance: none;
 }
-.right .contact-form input:focus-visible,
-.right .contact-form textarea:focus-visible {
-    outline: 1.5px solid var(--clr-grey);
-    outline-offset: 3px;
+.right .contact-form input:focus,
+.right .contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2.5px var(--clr-focusBlue);
     border-radius: 3px;
     -webkit-border-radius: 3px;
 }
@@ -327,6 +327,10 @@ footer .quick-links ul li {
         grid-template-columns: repeat(1, 1fr);
         max-width: 700px;
         margin: 75px auto;
+    }
+    .right .contact-form input:focus,
+    .right .contact-form textarea:focus {
+        box-shadow: 0 0 0 1.5px var(--clr-focusBlue);
     }
     footer .grid-container {
         grid-template-columns: repeat(2, 1fr);
