@@ -8,8 +8,19 @@
     --clr-white: #fff;
     --clr-offWhite: #f8f8f8;
     --clr-midGrey: #3d3d3d;
+    --clr-charcoal: #454545;
     --clr-grey: #c4c4c4;
     --clr-darkGrey: #313030;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--clr-white);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--clr-lightBrown);
 }
 body {
     width: 100%;
@@ -31,8 +42,7 @@ body {
 .links ul {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    right: .75rem;
+    margin-right: 1rem;
 }
 .links ul li {
     display: inline-block;
@@ -146,7 +156,7 @@ nav.active .hamburger-menu .bars::after {
     text-transform: capitalize;
 }
 .card .price h2 {
-    color: var(--clr-midGrey);
+    color: var(--clr-charcoal);
     font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: 500;
     margin: 25px auto 0;
@@ -359,6 +369,12 @@ footer .quick-links ul li {
     }
 }
 @media screen and (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+        background-color: var(--clr-blk);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--clr-grey);
+    }
     body {
         color: var(--clr-grey);
         background-color: var(--clr-blk);

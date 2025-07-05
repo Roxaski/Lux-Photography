@@ -41,8 +41,7 @@ body {
 .links ul {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    right: .75rem;
+    margin-right: 1rem;
 }
 .links ul li {
     display: inline-block;

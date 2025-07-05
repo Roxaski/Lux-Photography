@@ -11,6 +11,16 @@
     --clr-lightGrey: #807f7f;
     --clr-darkGrey: #313030;
 }
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--clr-white);
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--clr-lightBrown);
+}
 body {
     width: 100%;
     height: 100vh;
@@ -31,8 +41,7 @@ body {
 .links ul {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    right: .75rem;
+    margin-right: 1rem;
 }
 .links ul li {
     display: inline-block;
@@ -114,7 +123,7 @@ nav.active .hamburger-menu .bars::after {
     grid-template-columns: repeat(2, 1fr);
     background: var(--clr-darkGrey);
     width: 80%;
-    margin: 125px auto;
+    margin: 100px auto;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -129,15 +138,19 @@ nav.active .hamburger-menu .bars::after {
     font-family: 'Poppins', sans-serif;
 }
 .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 0 1rem;
 }
 .right h1 {
-    text-align: center;
     text-transform: uppercase;
     font-weight: 300;
     color: var(--clr-offWhite);
     font-size: clamp(1.1rem, 3vw, 1.3rem);
     letter-spacing: 1px;
+    margin-bottom: .75rem;
 }
 .right .contact-form {
     display: flex;
@@ -311,6 +324,9 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 990px) {
+    .right h1 {
+        margin-bottom: .25rem;
+    }
     footer {
         padding: 1rem 1.5rem;
     }
@@ -336,6 +352,12 @@ footer .quick-links ul li {
     }
 }
 @media screen and (prefers-color-scheme: dark) {
+    ::-webkit-scrollbar-track {
+        background-color: var(--clr-blk);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--clr-grey);
+    }
     body {
         color: var(--clr-grey);
         background-color: var(--clr-blk);
