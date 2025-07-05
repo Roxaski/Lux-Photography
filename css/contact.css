@@ -328,10 +328,6 @@ footer .quick-links ul li {
         max-width: 700px;
         margin: 75px auto;
     }
-    .right .contact-form input:focus,
-    .right .contact-form textarea:focus {
-        box-shadow: 0 0 0 1.5px var(--clr-focusBlue);
-    }
     footer .grid-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
