@@ -31,7 +31,7 @@ body {
 .wrapper {
     max-width: 90rem;
 }
-/*LINKS*/
+/* Nav */
 .mobile-header {
     display: none;
 }
@@ -117,7 +117,7 @@ nav.active .hamburger-menu .bars::before {
 nav.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
-/*PHOTOGRAPHER CARDS*/
+/* Photographer Cards */
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -216,7 +216,7 @@ nav.active .hamburger-menu .bars::after {
 .card.active .content p {
     opacity: 1;
 }
-/*FOOTER*/
+/* Footer */
 footer {
     position: absolute;
     top: 100%;
@@ -266,7 +266,7 @@ footer .quick-links ul li {
     letter-spacing: .5px;
     font-size: clamp(.85rem, 3vw, .9rem);
 }
-/*MEDIA QUERY'S*/
+/* Media Query's */
 @media screen and (max-width: 1195px) {
     .no-scroll {
         position: fixed;
@@ -443,7 +443,7 @@ footer .quick-links ul li {
         padding: 1.1rem;
     }
 }
-/*DARK MODE*/
+/* Dark Mode */
 @media screen and (prefers-color-scheme: dark) and (max-width: 1195px) {
     .links {
         background-color: var(--clr-blk);
