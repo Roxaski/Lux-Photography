@@ -210,7 +210,7 @@ section {
 }
 #photographers .content h2 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
-    font-weight: 300;
+    font-weight: 400;
     text-transform: capitalize;
     letter-spacing: .25px;
 }
@@ -329,10 +329,8 @@ section {
 #memories .content h2 {
     font-weight: 400;
     text-transform: capitalize;
-    letter-spacing: .25px;
-}
-#memories .content h2 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
+    letter-spacing: .25px;
 }
 #memories .content h2:nth-child(2) {
     font-size: clamp(1rem, 3vw, 1.2rem);
@@ -384,7 +382,7 @@ section {
 }
 #image-edit .content h2 {
     font-size: clamp(1.2rem, 3vw, 1.5rem);
-    font-weight: 300;
+    font-weight: 400;
     text-transform: capitalize;
     letter-spacing: .25px;
 }
