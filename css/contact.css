@@ -10,7 +10,7 @@
     --clr-grey: #c4c4c4;
     --clr-lightGrey: #807f7f;
     --clr-darkGrey: #313030;
-    --clr-focusBlue: #0078d4;
+    --clr-focusBlue: #0060df;
 }
 ::-webkit-scrollbar {
     width: 8px;
@@ -174,8 +174,8 @@ nav.active .hamburger-menu .bars::after {
 .right .contact-form input:focus,
 .right .contact-form textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 2.5px var(--clr-focusBlue);
-    border-radius: 3px;
+    box-shadow: 0 0 0 4px var(--clr-focusBlue);
+    border-radius: 5px;
     -webkit-border-radius: 3px;
 }
 .right .contact-form input::placeholder,
