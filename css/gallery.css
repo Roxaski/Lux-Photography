@@ -313,6 +313,9 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 865px) {
+    .lightbox img {
+        max-width: 90%;
+    }
     .lightbox .btn i {
         display: none;
     }
