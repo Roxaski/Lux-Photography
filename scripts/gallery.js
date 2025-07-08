@@ -1,11 +1,16 @@
 const gallery = document.querySelectorAll('.gallery img');
 const lightbox = document.querySelector('.lightbox img');
+const lightboxSizes = '(max-width: 865px) 90vw, 600px';
 const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
 const overlay = document.querySelector('.overlay');
-
-// Stores the index of the currently displayed image
+// stores the index of the currently displayed image
 let currentImage;
+// stores the value of where the finger touches the screen
+let touchStart;
+//  stores the value of when the finger stops on the screen
+let touchEnd;
+
 
 // loop through each image in the gallery
 gallery.forEach((img, index) => {
@@ -36,8 +41,13 @@ gallery.forEach((img, index) => {
 function preload(imageIndex) {
     // checks if the image is within the length of the gallery 
     if (imageIndex >= 0 && imageIndex < gallery.length) {
-        // creates a new image element, whose source is equal to that of the gallery position, + or - 1 when called
-        new Image().src = gallery[imageIndex].src;
+        const img = gallery[imageIndex];
+        const preloadImg = new Image();
+
+        // sets the image src, srcset and size for the browser to preload
+        preloadImg.srcset = img.srcset;
+        preloadImg.sizes = lightboxSizes;
+        preloadImg.src = img.src;
     };
 };
 
@@ -49,9 +59,15 @@ function displayOverlay() {
 
 // displays image & buttons
 function imagePreview() {
-    lightbox.src = gallery[currentImage].src;
-    lightbox.alt = gallery[currentImage].alt;
     lightbox.classList.add('active');
+
+    // lightbox should use more appropriate image sizes
+    lightbox.srcset = gallery[currentImage].srcset;
+    lightbox.sizes = lightboxSizes;
+    lightbox.alt = gallery[currentImage].alt;
+
+    // fallback in case srcset and sizes isn't supported on the browser
+    lightbox.src = gallery[currentImage].src;
 
     displayGalleryBtns();
 };
@@ -85,10 +101,12 @@ previousBtn.addEventListener('click', () => {
     preload(currentImage -1);
 });
 
-// removes overlay, image and buttons
+// removes overlay, image buttons, src and srcset along with alt
 function closeOverlay() {
     document.querySelector('body').style.overflow = 'auto';
     lightbox.src = '';
+    lightbox.srcset = '';
+    lightbox.alt = ''
     lightbox.classList.remove('active');
     overlay.style.display = 'none';
     nextBtn.style.display = 'none';
@@ -108,7 +126,6 @@ lightbox.addEventListener('touchstart', (e) => {
 });
 
 lightbox.addEventListener('touchend', (e) => {
-
     // returns the location of where touch ended on the X-axis
     touchEnd = e.changedTouches[0].clientX;
 

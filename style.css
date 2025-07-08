@@ -8,9 +8,11 @@
     --clr-white: #fff;
     --clr-offWhite: #f8f8f8;
     --clr-grey: #c4c4c4;
+    --clr-lightGrey: #d2cccc;
     --clr-lightBrown: #5c4949;
     --clr-darkGrey: #313030;
 }
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -265,7 +267,7 @@ section {
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 3px;
-    color: var(--clr-grey);
+    color: var(--clr-lightGrey);
 }
 /* Price Icons */
 #price-icons {
@@ -441,7 +443,7 @@ footer .quick-links ul li {
     font-size: clamp(.85rem, 3vw, .9rem);
 }
 /* Media Query's */
-@media screen and (max-width: 1208px) {
+@media screen and (max-width: 1195px) {
     .no-scroll {
         position: fixed;
         overflow-y: hidden;

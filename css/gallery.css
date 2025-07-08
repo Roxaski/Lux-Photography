@@ -135,19 +135,23 @@ nav.active .hamburger-menu .bars::after {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 .lightbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     z-index: 3;
 }
 .lightbox img {
     display: none;
     max-width: 100%;
     height: auto;
+    object-fit: contain;
     cursor: default;
 }
 .lightbox img.active {
@@ -310,10 +314,6 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 865px) {
-    .lightbox img {
-        max-width: 90%;
-        margin: 0 auto;
-    }
     .lightbox .btn i {
         display: none;
     }
