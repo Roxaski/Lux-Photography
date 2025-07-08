@@ -50,6 +50,7 @@ function displayOverlay() {
 // displays image & buttons
 function imagePreview() {
     lightbox.src = gallery[currentImage].src;
+    lightbox.alt = gallery[currentImage].alt;
     lightbox.classList.add('active');
 
     displayGalleryBtns();
@@ -87,6 +88,7 @@ previousBtn.addEventListener('click', () => {
 // removes overlay, image and buttons
 function closeOverlay() {
     document.querySelector('body').style.overflow = 'auto';
+    lightbox.src = '';
     lightbox.classList.remove('active');
     overlay.style.display = 'none';
     nextBtn.style.display = 'none';
