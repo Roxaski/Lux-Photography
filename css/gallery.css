@@ -313,9 +313,6 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 865px) {
-    .lightbox img {
-        max-width: 90%;
-    }
     .lightbox .btn i {
         display: none;
     }
@@ -335,9 +332,6 @@ footer .quick-links ul li {
     }
 }
 @media screen and (orientation: landscape) and (max-width: 960px) {
-    .lightbox {
-        width: 80%;
-    }
     .lightbox .btn i {
         display: none;
     }
