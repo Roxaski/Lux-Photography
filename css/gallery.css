@@ -143,16 +143,15 @@ nav.active .hamburger-menu .bars::after {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 600px;
     height: auto;
+    max-width: 600px;
     z-index: 3;
 }
 .lightbox img {
     display: none;
-    width: auto;
     max-width: 90vw;
+    width: auto;
     height: auto;
-    max-height: 90vh;
     object-fit: contain;
     cursor: default;
 }
@@ -335,11 +334,6 @@ footer .quick-links ul li {
 @media screen and (max-width: 515px) {
     .gallery {
         grid-template-columns: repeat(1, 1fr);
-    }
-}
-@media screen and (orientation: landscape) and (max-width: 1400px) and (hover: none) and (pointer: coarse) {
-    .lightbox .btn i {
-        display: none;
     }
 }
 @media screen and (orientation: landscape) and (max-width: 935px) {
