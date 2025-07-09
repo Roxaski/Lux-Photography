@@ -72,6 +72,13 @@ function imagePreview() {
     displayGalleryBtns();
 };
 
+// runs the image preview function, when the lightbox is open and the window resizes
+window.addEventListener('resize', () => {
+    if(overlay.style.display == 'block') {
+        imagePreview();
+    };
+});
+
 // removes the buttons from the first and last gallery img
 function displayGalleryBtns() {
     if(currentImage == 0) {
