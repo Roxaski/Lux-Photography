@@ -4,13 +4,9 @@ const lightboxSizes = '(max-width: 865px) 90vw, 600px';
 const previousBtn = document.querySelector('.previous');
 const nextBtn = document.querySelector('.next');
 const overlay = document.querySelector('.overlay');
+
 // stores the index of the currently displayed image
 let currentImage;
-// stores the value of where the finger touches the screen
-let touchStart;
-//  stores the value of when the finger stops on the screen
-let touchEnd;
-
 
 // loop through each image in the gallery
 gallery.forEach((img, index) => {
@@ -72,11 +68,22 @@ function imagePreview() {
     displayGalleryBtns();
 };
 
-// runs the image preview function, when the lightbox is open and the window resizes
+// stores the value of the timeout when resizing the window
+let resizeOrientationDelay;
+
+/*
+    sets a timeout before running the function that checks if the browser window resized,
+    which then runs the image preview function to refresh the image when changing orientation,
+    but only when the lightbox is open
+*/
 window.addEventListener('resize', () => {
-    if(overlay.style.display == 'block') {
-        imagePreview();
-    };
+    clearTimeout(resizeOrientationDelay);
+
+    resizeOrientationDelay = setTimeout(() => {
+        if(overlay.style.display == 'block') {
+            imagePreview();
+        };
+    }, 150);
 });
 
 // removes the buttons from the first and last gallery img
@@ -124,6 +131,9 @@ overlay.addEventListener('click', () => {
     closeOverlay();
 });
 
+// stores the value of where the finger touches the screen
+let touchStart;
+
 lightbox.addEventListener('touchstart', (e) => {
     // stops the default event from happening (swiping from the edge of the screenmakes the page go back)
     e.preventDefault();
@@ -131,6 +141,9 @@ lightbox.addEventListener('touchstart', (e) => {
     // returns the location of where the touch started on the X-axis
     touchStart = e.touches[0].clientX;
 });
+
+//  stores the value of when the finger stops on the screen
+let touchEnd;
 
 lightbox.addEventListener('touchend', (e) => {
     // returns the location of where touch ended on the X-axis
