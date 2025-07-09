@@ -16,8 +16,8 @@ gallery.forEach((img, index) => {
 
         displayOverlay();
         imagePreview();
-        preload(currentImage +1);
-        preload(currentImage -1);
+        preload(currentImage + 1);
+        preload(currentImage - 1);
     });
 
     // opens the selected image when pressing enter on keyboard
@@ -27,8 +27,8 @@ gallery.forEach((img, index) => {
 
             displayOverlay();
             imagePreview();
-            preload(currentImage +1);
-            preload(currentImage -1);
+            preload(currentImage + 1);
+            preload(currentImage - 1);
         };
     });
 });
@@ -76,14 +76,30 @@ let resizeOrientationDelay;
     which then runs the image preview function to refresh the image when changing orientation,
     but only when the lightbox is open
 */
+
 window.addEventListener('resize', () => {
     clearTimeout(resizeOrientationDelay);
 
     resizeOrientationDelay = setTimeout(() => {
         if(overlay.style.display == 'block') {
             imagePreview();
-        };
+        }
     }, 150);
+
+    /* 
+        adds an active class to the content wrapper which hides the content when the lightbox is active,
+        this helps to prevent content flashing when switching orientations
+    */
+
+    if(overlay.style.display == 'block') {
+        const contentWrapper = document.querySelector('.content-wrapper');
+        contentWrapper.classList.add('active');
+        
+        setTimeout(() => {
+            imagePreview();
+            contentWrapper.classList.remove('active');
+        }, 200);
+    }
 });
 
 // removes the buttons from the first and last gallery img
@@ -112,7 +128,7 @@ nextBtn.addEventListener('click', () => {
 previousBtn.addEventListener('click', () => {
     currentImage --;
     imagePreview();
-    preload(currentImage -1);
+    preload(currentImage - 1);
 });
 
 // removes overlay, image buttons, src and srcset along with alt
@@ -120,7 +136,7 @@ function closeOverlay() {
     document.querySelector('body').style.overflow = 'auto';
     lightbox.src = '';
     lightbox.srcset = '';
-    lightbox.alt = ''
+    lightbox.alt = '';
     lightbox.classList.remove('active');
     overlay.style.display = 'none';
     nextBtn.style.display = 'none';
@@ -155,12 +171,12 @@ lightbox.addEventListener('touchend', (e) => {
     if(swipeToChangeImg > minSwipe && currentImage < gallery.length - 1) {
         currentImage ++;
         imagePreview();
-        preload(currentImage +1);
+        preload(currentImage + 1);
 
     } else if (swipeToChangeImg < -minSwipe && currentImage > 0) {
         currentImage --;
         imagePreview();
-        preload(currentImage -1);
+        preload(currentImage - 1);
     };
 });
 
@@ -169,11 +185,11 @@ window.addEventListener('keydown', (e) => {
     if(overlay.style.display == 'block' && e.key == 'ArrowRight' &&  currentImage < gallery.length - 1) {
         currentImage ++;
         imagePreview();
-        preload(currentImage +1);
+        preload(currentImage + 1);
     } else if (overlay.style.display == 'block' && e.key == 'ArrowLeft' && currentImage > 0) {
         currentImage --;
         imagePreview();
-        preload(currentImage -1);
+        preload(currentImage - 1);
     } else if (e.key == 'Escape') {
         closeOverlay();
     };

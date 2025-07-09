@@ -183,6 +183,9 @@ nav.active .hamburger-menu .bars::after {
     background: var(--clr-blk);
     z-index: 2;
 }
+.overlay.active {
+    display: block;
+}
 /* Footer */
 footer {
     position: relative;
@@ -233,6 +236,11 @@ footer .quick-links ul li {
     font-size: clamp(.85rem, 3vw, .9rem);
 }
 /* Media Query's */
+@media (orientation: portrait), (orientation: landscape) {
+    .content-wrapper.active {
+        visibility: hidden;
+    }
+}
 @media screen and (max-width: 1195px) {
     .no-scroll {
         position: fixed;
