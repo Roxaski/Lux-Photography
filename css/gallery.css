@@ -149,8 +149,10 @@ nav.active .hamburger-menu .bars::after {
 }
 .lightbox img {
     display: none;
-    max-width: 100%;
+    max-width: 90vw;
+    width: auto;
     height: auto;
+    object-fit: contain;
     cursor: default;
 }
 .lightbox img.active {
