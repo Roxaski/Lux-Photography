@@ -121,11 +121,12 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     margin: 40px auto;
     padding: 0 1.1rem;
-    transition: opacity 150ms ease-out;
+    transition: opacity 150ms ease-out, visibility 0s 150ms;
 }
 .content-wrapper.active {
     opacity: 0;
-    transition: opacity 50ms ease-in;
+    visibility: hidden;
+    transition: opacity 50ms ease-out, visibility 0s 50ms;
 }
 .gallery {
     display: grid;
@@ -201,6 +202,12 @@ footer {
     color: var(--clr-offWhite);
     font-family: 'Poppins', sans-serif;
     padding: 1.75rem 2.5rem;
+    transition: opacity 150ms ease-out, visibility 0s 150ms;
+}
+footer.active {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 50ms ease-out, visibility 0s 50ms;
 }
 footer .grid-container {
     display: grid;

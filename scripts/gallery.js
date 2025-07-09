@@ -94,6 +94,7 @@ window.addEventListener('resize', () => {
             setTimeout(() => {
                 contentWrapper.classList.remove('active');
                 footer.classList.remove('active');
+                // sets a delay before removing the class from content wrapper and footer
             }, 50);
         }
         // 150ms delay to allow the image to render
