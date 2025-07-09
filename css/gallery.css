@@ -121,6 +121,11 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     margin: 40px auto;
     padding: 0 1.1rem;
+    transition: opacity 100ms ease-out;
+}
+.content-wrapper.active {
+    opacity: 0;
+    transition: none;
 }
 .gallery {
     display: grid;
@@ -236,11 +241,6 @@ footer .quick-links ul li {
     font-size: clamp(.85rem, 3vw, .9rem);
 }
 /* Media Query's */
-@media (orientation: portrait), (orientation: landscape) {
-    .content-wrapper.active {
-        visibility: hidden;
-    }
-}
 @media screen and (max-width: 1195px) {
     .no-scroll {
         position: fixed;

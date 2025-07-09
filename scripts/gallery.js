@@ -87,8 +87,9 @@ window.addEventListener('resize', () => {
     }, 150);
 
     /* 
-        adds an active class to the content wrapper which hides the content when the lightbox is active,
-        this helps to prevent content flashing when switching orientations
+        adds an active class to the content wrapper which then hides the content when the lightbox is active,
+        this helps to prevent the gallery content flashing when switching orientations,
+        which in turn is hidden for 250ms to give the image time to render
     */
 
     if(overlay.style.display == 'block') {
@@ -96,9 +97,8 @@ window.addEventListener('resize', () => {
         contentWrapper.classList.add('active');
         
         setTimeout(() => {
-            imagePreview();
             contentWrapper.classList.remove('active');
-        }, 200);
+        }, 250);
     }
 });
 
@@ -151,7 +151,7 @@ overlay.addEventListener('click', () => {
 let touchStart;
 
 lightbox.addEventListener('touchstart', (e) => {
-    // stops the default event from happening (swiping from the edge of the screenmakes the page go back)
+    // stops the default event from happening (swiping from the edge of the screen makes the page go back)
     e.preventDefault();
     
     // returns the location of where the touch started on the X-axis
