@@ -71,38 +71,36 @@ function imagePreview() {
 // stores the value of the timeout when resizing the window
 let resizeOrientationDelay;
 
-/*
-    sets a timeout before running the function that checks if the browser window resized,
-    which then runs the image preview function to refresh the image when changing orientation,
-    but only when the lightbox is open
-*/
-
 window.addEventListener('resize', () => {
+    // clears the existing / next time out
     clearTimeout(resizeOrientationDelay);
 
+    const contentWrapper = document.querySelector('.content-wrapper');
+    const footer = document.querySelector('footer');
+
+    // adds active class to the content wrapper and footer in order to hide them when changing orientation
+    if(overlay.style.display == 'block') {
+        contentWrapper.classList.add('active');
+        footer.classList.add('active');
+    };
+
+    // time out function to help with the image render
     resizeOrientationDelay = setTimeout(() => {
         if(overlay.style.display == 'block') {
+            // renders the image in order to get it's new size when changing orientations
             imagePreview();
+
+            // removes the active class once the image is rendered and after a 50ms delay
+            setTimeout(() => {
+                contentWrapper.classList.remove('active');
+                footer.classList.remove('active');
+            }, 50);
         }
+        // 150ms delay to allow the image to render
     }, 150);
-
-    /* 
-        adds an active class to the content wrapper which then hides the content when the lightbox is active,
-        this helps to prevent the gallery content flashing when switching orientations,
-        which in turn is hidden for 250ms to give the image time to render
-    */
-
-    if(overlay.style.display == 'block') {
-        const contentWrapper = document.querySelector('.content-wrapper');
-        contentWrapper.classList.add('active');
-        
-        setTimeout(() => {
-            contentWrapper.classList.remove('active');
-        }, 250);
-    }
 });
 
-// removes the buttons from the first and last gallery img
+// removes the buttons from the first and last lightbox images
 function displayGalleryBtns() {
     if(currentImage == 0) {
         previousBtn.style.display = 'none';

@@ -121,11 +121,11 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     margin: 40px auto;
     padding: 0 1.1rem;
-    transition: opacity 100ms ease-out;
+    transition: opacity 150ms ease-out;
 }
 .content-wrapper.active {
     opacity: 0;
-    transition: none;
+    transition: opacity 50ms ease-in;
 }
 .gallery {
     display: grid;
@@ -186,6 +186,7 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
     height: 100%;
     background: var(--clr-blk);
+    backface-visibility: hidden;
     z-index: 2;
 }
 .overlay.active {
