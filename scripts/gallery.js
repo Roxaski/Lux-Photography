@@ -68,11 +68,11 @@ function imagePreview() {
     displayGalleryBtns();
 };
 
-// stores the value of the timeout when resizing the window
-let resizeTimeout;
+// stores the value of the timeout ID which is used to delay the resize from triggering too often
+let timeoutID;
 
 window.addEventListener('resize', () => {
-    clearTimeout(resizeTimeout);
+    clearTimeout(timeoutID);
     
     if(overlay.style.display == 'block') {
         const contentWrapper = document.querySelector('.content-wrapper');
@@ -82,7 +82,7 @@ window.addEventListener('resize', () => {
         contentWrapper.classList.add('active');
         footer.classList.add('active');
         
-        resizeTimeout = setTimeout(() => {
+        timeoutID = setTimeout(() => {
             // re-render image then show content after a short delay
             imagePreview();
             
@@ -90,7 +90,7 @@ window.addEventListener('resize', () => {
                 contentWrapper.classList.remove('active');
                 footer.classList.remove('active');
             }, 50);
-        }, 150);
+        }, 300);
     }
 });
 
