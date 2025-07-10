@@ -9,8 +9,8 @@
     --clr-offWhite: #f8f8f8;
     --clr-grey: #c4c4c4;
     --clr-lightGrey: #d2cccc;
-    --clr-lightBrown: #5c4949;
     --clr-darkGrey: #313030;
+    --clr-lightBrown: #a68e8e;
 }
 /* Scrollbar */
 ::-webkit-scrollbar {
