@@ -69,36 +69,29 @@ function imagePreview() {
 };
 
 // stores the value of the timeout when resizing the window
-let resizeOrientationDelay;
+let resizeTimeout;
 
 window.addEventListener('resize', () => {
-    // clears the existing / next time out
-    clearTimeout(resizeOrientationDelay);
-
-    const contentWrapper = document.querySelector('.content-wrapper');
-    const footer = document.querySelector('footer');
-
-    // adds active class to the content wrapper and footer in order to hide them when changing orientation
+    clearTimeout(resizeTimeout);
+    
     if(overlay.style.display == 'block') {
+        const contentWrapper = document.querySelector('.content-wrapper');
+        const footer = document.querySelector('footer');
+        
+        // add active class to hide gallery content during resize
         contentWrapper.classList.add('active');
         footer.classList.add('active');
-    };
-
-    // time out function to help with the image render
-    resizeOrientationDelay = setTimeout(() => {
-        if(overlay.style.display == 'block') {
-            // renders the image in order to get it's new size when changing orientations
+        
+        resizeTimeout = setTimeout(() => {
+            // re-render image then show content after a short delay
             imagePreview();
-
-            // removes the active class once the image is rendered and after a 50ms delay
+            
             setTimeout(() => {
                 contentWrapper.classList.remove('active');
                 footer.classList.remove('active');
-                // sets a delay before removing the class from content wrapper and footer
             }, 50);
-        }
-        // 150ms delay to allow the image to render
-    }, 150);
+        }, 150);
+    }
 });
 
 // removes the buttons from the first and last lightbox images

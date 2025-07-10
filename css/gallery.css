@@ -122,6 +122,7 @@ nav.active .hamburger-menu .bars::after {
     margin: 40px auto;
     padding: 0 1.1rem;
     transition: opacity 150ms ease-out, visibility 0s 150ms;
+    backface-visibility: hidden;
 }
 .content-wrapper.active {
     opacity: 0;
@@ -203,6 +204,7 @@ footer {
     font-family: 'Poppins', sans-serif;
     padding: 1.75rem 2.5rem;
     transition: opacity 150ms ease-out, visibility 0s 150ms;
+    backface-visibility: hidden;
 }
 footer.active {
     opacity: 0;
