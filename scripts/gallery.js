@@ -90,7 +90,7 @@ window.addEventListener('resize', () => {
                 contentWrapper.classList.remove('active');
                 footer.classList.remove('active');
             }, 50);
-        }, 300);
+        }, 150);
     }
 });
 
