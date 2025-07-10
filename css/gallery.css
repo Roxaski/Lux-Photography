@@ -122,11 +122,9 @@ nav.active .hamburger-menu .bars::after {
     margin: 40px auto;
     padding: 0 1.1rem;
     transition: opacity 150ms ease-out;
-    backface-visibility: hidden;
 }
 .content-wrapper.active {
     opacity: 0;
-    visibility: hidden;
     transition: opacity 50ms ease-out;
 }
 .gallery {
@@ -188,7 +186,6 @@ nav.active .hamburger-menu .bars::after {
     width: 100%;
     height: 100%;
     background: var(--clr-blk);
-    backface-visibility: hidden;
     z-index: 2;
 }
 .overlay.active {
@@ -196,19 +193,14 @@ nav.active .hamburger-menu .bars::after {
 }
 /* Footer */
 footer {
-    position: relative;
-    width: 100%;
-    height: auto;
     background: var(--clr-darkGrey);
     color: var(--clr-offWhite);
     font-family: 'Poppins', sans-serif;
     padding: 1.75rem 2.5rem;
     transition: opacity 150ms ease-out;
-    backface-visibility: hidden;
 }
 footer.active {
     opacity: 0;
-    visibility: hidden;
     transition: opacity 50ms ease-out;
 }
 footer .grid-container {

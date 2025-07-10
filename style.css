@@ -395,9 +395,6 @@ section {
 }
 /* Footer */
 footer {
-    position: relative;
-    width: 100%;
-    height: auto;
     background: var(--clr-darkGrey);
     color: var(--clr-offWhite);
     font-family: 'Poppins', sans-serif;

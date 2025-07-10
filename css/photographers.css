@@ -220,8 +220,6 @@ nav.active .hamburger-menu .bars::after {
 footer {
     position: absolute;
     top: 100%;
-    width: 100%;
-    height: auto;
     background: var(--clr-darkGrey);
     color: var(--clr-offWhite);
     font-family: 'Poppins', sans-serif;
