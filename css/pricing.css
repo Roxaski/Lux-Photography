@@ -206,7 +206,7 @@ nav.active .hamburger-menu .bars::after {
     font-size: clamp(1rem, 3vw, 1.1rem);
     font-weight: 300;
     text-transform: capitalize;
-    margin: 0 auto;
+    text-align: center;
 }
 .card .list ul {
     line-height: 2.2;
