@@ -330,15 +330,22 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-transform: capitalize;
+}
+#price-icons .grid-container .left span,
+#price-icons .grid-container .center span,
+#price-icons .grid-container .right span {
+    font-weight: 400;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-top: .5rem;
+    letter-spacing: .15px;
 }
 #price-icons .grid-container .left p,
 #price-icons .grid-container .center p,
 #price-icons .grid-container .right p {
-    line-height: 1.8;
-    text-transform: capitalize;
+    line-height: 2;
     font-weight: 300;
     font-size: clamp(1rem, 3vw, 1.1rem);
-    letter-spacing: .5px;
     text-align: center;
 }
 /* Precious Moments */
