@@ -551,6 +551,9 @@ footer .quick-links ul li {
     .hero-section #fade_in_animation_two {
         display: none;
     }
+    .hero-section .title {
+        margin: 55px auto;
+    }
 }
 @media screen and (max-width: 380px) {
     .hero-section .title {
