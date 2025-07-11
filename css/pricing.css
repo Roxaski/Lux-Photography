@@ -1,3 +1,39 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Poiret One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/poiret-one-v17-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../assets/fonts/poppins-v23-latin-300.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/poppins-v23-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../assets/fonts/poppins-v23-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../assets/fonts/poppins-v23-latin-600.woff2') format('woff2');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -123,8 +159,8 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    width: 800px;
+    gap: 2rem;
+    width: 825px;
     font-family: 'Poppins', sans-serif;
     margin: 50px auto;
 }
@@ -146,10 +182,13 @@ nav.active .hamburger-menu .bars::after {
     rgb(222, 78, 104) 100%);
 }
 .card .title h1 {
-    font-size: clamp(1rem, 3vw, 1.1rem);
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: .25rem;
+}
+.card .title h1:nth-child(1) {
+    font-size: clamp(1rem, 3vw, 1.15rem);
 }
 .card .title h1:nth-child(2) {
     font-size: clamp(.9rem, 3vw, .95rem);
@@ -165,16 +204,16 @@ nav.active .hamburger-menu .bars::after {
 }
 .card .price h3 {
     font-size: clamp(1rem, 3vw, 1.1rem);
-    font-weight: 400;
+    font-weight: 300;
     text-transform: capitalize;
-    text-align: center;
+    margin: 0 auto;
 }
 .card .list ul {
     line-height: 2.2;
-    padding: 3rem 2rem;
+    padding: 2.75rem 2rem;
 }
 .card .list ul li {
-    font-weight: 400;
+    font-weight: 300;
     font-size: clamp(.9rem, 3vw, 1rem);
     text-transform: capitalize;
     letter-spacing: .5px;
@@ -188,7 +227,7 @@ nav.active .hamburger-menu .bars::after {
     padding: .5rem;
     color: var(--clr-white);
     background: linear-gradient(175deg, 
-    rgb(197, 126, 50) 25%, 
+    rgb(237, 154, 66) 25%, 
     rgb(222, 78, 104) 90%);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -325,11 +364,10 @@ footer .quick-links ul li {
         padding: 1rem 1.5rem;
     }
 }
-@media screen and (max-width: 843px) {
+@media screen and (max-width: 890px) {
     .content-wrapper {
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
-        gap: 2rem;
     }
 }
 @media screen and (max-width: 725px) {
@@ -396,10 +434,14 @@ footer .quick-links ul li {
         background-color: var(--clr-darkGrey);
     }
     .card .title {
-        background: #c57e32;
         background: linear-gradient(0deg, 
-        rgb(197, 126, 50) 0%, 
+        rgb(196, 119, 37) 0%, 
         rgb(186, 68, 90) 100%);
+    }
+    .card button {
+        background: linear-gradient(175deg, 
+        rgb(196, 119, 37) 25%, 
+        rgb(222, 78, 104) 90%);
     }
     .card .price h2 {
         color: var(--clr-offWhite);
