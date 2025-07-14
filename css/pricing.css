@@ -182,6 +182,8 @@ nav.active .hamburger-menu .bars::after {
     rgb(222, 78, 104) 100%);
 }
 .card .title h1 {
+    position: relative;
+    bottom: .5rem;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
@@ -199,20 +201,32 @@ nav.active .hamburger-menu .bars::after {
     color: var(--clr-charcoal);
     font-size: clamp(2rem, 3vw, 2.5rem);
     font-weight: 500;
-    margin: 25px auto 0;
+    margin: 25px auto 7px;
     text-align: center;
 }
 .card .price h3 {
+    position: relative;
     font-size: 1.1rem;
     font-weight: 300;
     text-transform: capitalize;
     text-align: center;
+}
+.card .price h3::after {
+    content: '';
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-charcoal);
+    width: 75%;
+    height: 1.5px;
 }
 .card .list ul {
     line-height: 2.2;
     padding: 2.75rem 2rem;
 }
 .card .list ul li {
+    list-style: none;
     font-weight: 300;
     font-size: clamp(.9rem, 3vw, 1rem);
     text-transform: capitalize;
@@ -437,6 +451,9 @@ footer .quick-links ul li {
         background: linear-gradient(0deg, 
         rgb(196, 119, 37) 0%, 
         rgb(186, 68, 90) 100%);
+    }
+    .card .price h3::after {
+        background: var(--clr-grey);
     }
     .card button {
         background: linear-gradient(175deg, 
