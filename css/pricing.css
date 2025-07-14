@@ -203,7 +203,7 @@ nav.active .hamburger-menu .bars::after {
     text-align: center;
 }
 .card .price h3 {
-    font-size: clamp(1rem, 3vw, 1.1rem);
+    font-size: 1.1rem;
     font-weight: 300;
     text-transform: capitalize;
     text-align: center;
