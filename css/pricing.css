@@ -232,6 +232,9 @@ nav.active .hamburger-menu .bars::after {
     text-transform: capitalize;
     letter-spacing: .5px;
 }
+.card .list ul li i {
+    margin-right: .25rem;
+}
 .card button {
     position: absolute;
     bottom: 0;
