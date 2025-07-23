@@ -24,7 +24,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
-  src: url('poppins-v23-latin-500.woff2') format('woff2');
+  src: url('../assets/fonts/poppins-v23-latin-500.woff2') format('woff2');
 }
 @font-face {
   font-display: swap;
