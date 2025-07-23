@@ -319,7 +319,7 @@ footer .quick-links ul li {
     }
     .mobile-header h1 {
         position: relative;
-        left: 1rem;
+        left: .75rem;
         font-weight: 500;
         font-size: clamp(1.65rem, 3vw, 1.75rem);
     }
