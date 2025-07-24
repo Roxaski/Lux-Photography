@@ -117,7 +117,7 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 1.3rem;
+    top: 1rem;
     right: 1rem;
     height: 2rem;
     width: 1.25rem;
@@ -315,7 +315,8 @@ footer .quick-links ul li {
     }
     .mobile-header img {
         width: 30px;
-        margin-bottom: .75rem;
+        height: auto;
+        margin-bottom: 0;
     }
     .mobile-header h1 {
         position: relative;
