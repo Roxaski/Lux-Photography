@@ -548,6 +548,13 @@ footer .quick-links ul li {
     #discover .img-wrapper:hover img.zoom {
         transform: scale(1);
     }
+    #image-edit .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #image-edit .content {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
     footer {
         padding: 1rem 1.5rem;
     }
@@ -556,13 +563,6 @@ footer .quick-links ul li {
     #price-icons .grid-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 7rem;
-    }
-    #image-edit .grid-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    #image-edit .content {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
     }
     footer .grid-container {
         grid-template-columns: repeat(1, 1fr);
