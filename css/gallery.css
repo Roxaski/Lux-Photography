@@ -147,19 +147,16 @@ nav.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
 /* Gallery */
-.content-wrapper {
-    margin: 40px auto;
-    padding: 0 1.1rem;
-    transition: opacity 150ms ease-out;
-}
-.content-wrapper.active {
-    opacity: 0;
-    transition: opacity 50ms ease-out;
-}
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: .5rem;
+    margin: 40px auto;
+    padding: 0 1.1rem;
+    transition: opacity 150ms ease-out;
+}
+.gallery.active {
+    opacity: 0;
 }
 .gallery img {
     width: 100%;
@@ -340,7 +337,7 @@ footer .quick-links ul li {
     .hamburger-menu {
         display: flex;
     }
-    .content-wrapper {
+    .gallery {
         margin: 75px auto;
     }
     .lightbox .btn i {
@@ -422,7 +419,7 @@ footer .quick-links ul li {
     nav.active .hamburger-menu .bars::after {
         background-color: var(--clr-grey);
     }
-    .content-wrapper img {
+    .gallery img {
         color: var(--clr-offWhite);
     }
 }
