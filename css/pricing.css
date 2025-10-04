@@ -160,7 +160,7 @@ nav.active .hamburger-menu .bars::after {
     gap: 2rem;
     width: 825px;
     font-family: 'Poppins', sans-serif;
-    margin: 50px auto;
+    margin: 50px auto 55px;
 }
 .card {
     position: relative;
