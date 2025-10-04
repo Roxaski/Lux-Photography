@@ -365,6 +365,10 @@ footer .quick-links ul li {
     .right .contact-form textarea:focus {
         box-shadow: 0 0 0 3px var(--clr-focusBlue);
     }
+    .right .contact-form button {
+        margin: 0;
+        padding: .48rem;
+    }
     footer .grid-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
