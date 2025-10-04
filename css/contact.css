@@ -152,7 +152,7 @@ nav.active .hamburger-menu .bars::after {
     grid-template-columns: repeat(2, 1fr);
     background: var(--clr-darkGrey);
     width: 80%;
-    margin: 100px auto 130px;
+    margin: 100px auto 140px;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -192,7 +192,7 @@ nav.active .hamburger-menu .bars::after {
 .right .contact-form textarea {
     width: 98%;
     height: 30px;
-    margin: 4px auto;
+    margin: 3px auto;
     border-radius: 3px;
     font-size: 1rem;
     background-color: var(--clr-white);
@@ -205,7 +205,7 @@ nav.active .hamburger-menu .bars::after {
 .right .contact-form input:focus,
 .right .contact-form textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 3px var(--clr-focusOrange);
+    box-shadow: 0 0 0 2px var(--clr-focusOrange);
     border-radius: 5px;
     -webkit-border-radius: 3px;
 }
@@ -216,11 +216,10 @@ nav.active .hamburger-menu .bars::after {
 .right .contact-form textarea {
     min-height: 95px;
     resize: none;
-    padding-top: .25rem;
 }
 .right .contact-form button {
     display: block;
-    margin: 3px 0 10px;
+    margin: 0 0 7px 0;
     width: 98%;
     padding: .48rem;
     letter-spacing: .5px;
@@ -354,7 +353,7 @@ footer .quick-links ul li {
         padding: .5rem;
     }
     .right h1 {
-        top: .25rem;
+        top: 0;
     }
     .right .contact-form input,
     .right .contact-form textarea,
