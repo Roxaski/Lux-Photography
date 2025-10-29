@@ -1,16 +1,22 @@
-const photographerCard = document.querySelectorAll('.card');
+/*
+    closest() searches up from the clicked element to find the nearest parent with class of card,
+    the reason for this is that it allows to click anywhere on the card to toggle the active class
+*/
 
-// loops through each photographer card, adding an active class when clicked
-photographerCard.forEach(card => {
-    card.addEventListener('click', () => {
+// expands the  photographer cards when clicking on it
+document.querySelector('.content-wrapper').addEventListener('click', (e) => {
+    const card = e.target.closest('.card');
+    if (card) {
         card.classList.toggle('active');
-    });
+    };
+});
 
-    // opens the photographer cards when pressing the enter key
-    card.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            e.preventDefault();
+// expands the  photographer cards using the enter key for better accessibility
+document.querySelector('.content-wrapper').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        const card = e.target.closest('.card');
+        if (card) {
             card.classList.toggle('active');
-        }
-    });
+        };
+    };
 });
