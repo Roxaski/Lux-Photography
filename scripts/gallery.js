@@ -101,7 +101,7 @@ previousBtn.addEventListener('click', () => {
 
 // removes overlay, image buttons, src and srcset along with alt
 function closeOverlay() {
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'auto';
     lightbox.src = '';
     lightbox.srcset = '';
     lightbox.alt = '';
