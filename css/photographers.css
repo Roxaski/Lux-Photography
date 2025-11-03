@@ -156,25 +156,22 @@ nav.active .hamburger-menu .bars::after {
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 100px auto;
+    margin: 125px auto;
 }
 .card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     background: var(--clr-white);
     border-radius: 5px;
     width: 250px;
     height: 300px;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
-    transition: height 250ms ease-in-out;
-    transform: translateZ(0);
-}
-.card.active {
-    height: 375px;
+    overflow: visible;
+    transition: transform 250ms ease;
 }
 .card .more-info {
     position: absolute;
@@ -182,7 +179,6 @@ nav.active .hamburger-menu .bars::after {
     opacity: 1;
     text-align: center;
     transition: opacity 250ms ease;
-    backface-visibility: hidden;
 }
 .card .more-info h1 {
     text-transform: uppercase;
@@ -210,13 +206,11 @@ nav.active .hamburger-menu .bars::after {
     height: 150px;
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
     transition: transform 250ms ease-in-out;
-    transform: translateZ(0);
     z-index: 1;
 }
 .card.active .img-container {
-    transform: translateY(-45px);
+    transform: translate3d(0, -5.5rem, 0);
 }
 .card .img-container img {
     position: absolute;
@@ -229,29 +223,18 @@ nav.active .hamburger-menu .bars::after {
     font-family: 'Poppins', sans-serif;
 }
 .card .content {
-    position: absolute;
-    top: 130px;
     width: 100%;
-    padding: 0 2rem;
+    padding: .75rem;
     opacity: 0;
-    transition: opacity 250ms ease, transform 250ms ease;
+    transition: opacity 250ms ease;
 }
 .card.active .content {
     opacity: 1;
-    transform: translateY(20px);
-    overflow: hidden;
 }
 .card .content p {
     font-size: clamp(.95rem, 3vw, 1rem);
     line-height: 1.7;
     font-weight: 300;
-    opacity: 0;
-    backface-visibility: hidden;
-    transition: opacity 100ms ease-in-out;
-}
-.card.active .content p {
-    opacity: 1;
-    transition: opacity 250ms ease-in-out 150ms;
 }
 footer {
     position: absolute;
@@ -370,62 +353,8 @@ footer .quick-links ul li {
     }
     .content-wrapper {
         grid-template-columns: repeat(2, 1fr);
-        margin: 130px auto;
-        gap: 8rem 0;
-    }
-    .card {
-        height: 200px;
-    }
-    .card.active {
-        width: 450px;
-        height: 200px;
-    }
-    .card .more-info {
-        top: 7.2rem;
-    }
-    .card .more-info:not(.active) {
-        opacity: 1;
-    }
-    .card .img-container {
-        top: -50px;
-    }
-    .card .img-container:not(.active) {
-        transform: translateY(0);
-    }
-    .card.active .img-container {
-        transform: translateY(-45px);
-    }
-    .card .content {
-        position: relative;
-        top: 5px;
-        padding: 0;
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-    }
-    .card.active .content {
-        opacity: 1;
-        top: 10px;
-        max-height: 100px;
-        width: 100%;
-    }
-    .card.active .more-info {
-        opacity: 0;
-    }
-    .card:not(.active) {
-        width: 300px;
-    }
-    .card .content p {
-        margin: 0 auto;
-        width: 90%;
-        transition: none;
-    }
-    .card .content p:not(.active) {
-        opacity: 0;
-    }
-    .card.active .content p {
-        opacity: 1;
-        transition: opacity 250ms ease-in-out 150ms;
+        max-width: 600px;
+        gap: 7rem;
     }
     footer {
         position: relative;
@@ -437,36 +366,18 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 990px) {
-    .card.active {
-        width: 400px;
-    }
     footer {
         padding: 1rem 1.5rem;
     }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 725px) {
     .content-wrapper {
         grid-template-columns: repeat(1, 1fr);
+        gap: 7rem;
     }
-}
-@media screen and (max-width: 725px) {
     footer .grid-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 3rem 10rem;
-    }
-}
-@media screen and (max-width: 505px) {
-    .content-wrapper {
-        gap: 10rem 0;
-    }
-    .card {
-        max-width: 80%;
-    }
-    .card.active {
-        width: 300px;
-    }
-    .card.active .content {
-        overflow-y: auto;
     }
 }
 @media screen and (max-width: 300px) {

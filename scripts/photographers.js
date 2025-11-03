@@ -1,22 +1,31 @@
-/*
-    closest() searches up from the clicked element to find the nearest parent with class of card,
-    the reason for this is that it allows to click anywhere on the card to toggle the active class
-*/
+const contentWrapper = document.querySelector('.content-wrapper');
+let cardAnimation = false;
 
-// expands the  photographer cards when clicking on it
-document.querySelector('.content-wrapper').addEventListener('click', (e) => {
-    const card = e.target.closest('.card');
-    if (card) {
-        card.classList.toggle('active');
-    };
+/*
+    toggles the cards content with a timeout, 
+    to prevent rapid toggling during animations transitions
+*/
+function toggleCard(card) {
+    if (!card || cardAnimation) return;
+    
+    cardAnimation = true;
+    card.classList.toggle('active');
+    
+    setTimeout(() => {
+        cardAnimation = false;
+    }, 250);
+};
+
+// toggles card content with a click
+document.querySelector('.content-wrapper').addEventListener('click', e => {
+  const card = e.target.closest('.card');
+    if (!card) return;
+    card.classList.toggle('active');
 });
 
-// expands the  photographer cards using the enter key for better accessibility
-document.querySelector('.content-wrapper').addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        const card = e.target.closest('.card');
-        if (card) {
-            card.classList.toggle('active');
-        };
-    };
+// toggles card content with enter key for accessibility
+document.querySelector('.content-wrapper').addEventListener('keydown', e => {
+  const card = e.target.closest('.card');
+  if (!card) return;
+  card.classList.toggle('active');
 });
