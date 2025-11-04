@@ -228,7 +228,7 @@ footer.active {
 }
 footer .grid-container {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     align-content: center;
     justify-content: center;
@@ -359,13 +359,13 @@ footer .quick-links ul li {
         grid-template-columns: repeat(2, 1fr);
     }
     footer .grid-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         gap: 3rem 10rem;
     }
 }
 @media screen and (max-width: 515px) {
     .gallery {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 @media screen and (max-width: 300px) {

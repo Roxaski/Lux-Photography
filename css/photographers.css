@@ -246,7 +246,7 @@ footer {
 }
 footer .grid-container {
     display: grid;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     align-content: center;
     justify-content: center;
@@ -372,11 +372,11 @@ footer .quick-links ul li {
 }
 @media screen and (max-width: 725px) {
     .content-wrapper {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         gap: 7rem;
     }
     footer .grid-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
         gap: 3rem 10rem;
     }
 }
