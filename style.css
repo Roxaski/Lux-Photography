@@ -590,6 +590,15 @@ footer .quick-links ul li {
         bottom: 65%;
     }
 }
+@media screen and (orientation: landscape) and (max-width: 935px) {
+    .hero-section #fade_in_animation_one,
+    .hero-section #fade_in_animation_two {
+        animation: none;
+    }
+    .hero-section .title i {
+        display: none;
+    }
+}
 @media screen and (prefers-color-scheme: dark) and (max-width: 1195px) {
     .links {
         background-color: var(--clr-blk);
