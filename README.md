@@ -1,7 +1,4 @@
-# Lux-Photography
-
 <img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/88e3a171-a124-49e5-8870-b0a2bbd27617" />
-
 
 ## Welcome to Lux Photography
 
