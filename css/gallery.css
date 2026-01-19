@@ -228,7 +228,7 @@ footer.active {
 }
 footer .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
     align-content: center;
     justify-content: center;
@@ -243,10 +243,11 @@ footer h2 {
 }
 footer .about p {
     font-size: clamp(.8rem, 3vw, .85rem);
+    font-weight: 300;
     letter-spacing: .25px;
     line-height: 1.6;
     margin-top: .5rem;
-    width: 95%;
+    width: 22rem;
 }
 footer .about ul {
     display: flex;
@@ -347,6 +348,9 @@ footer .quick-links ul li {
 @media screen and (max-width: 990px) {
     footer {
         padding: 1rem 1.5rem;
+    }
+    footer .about p {
+        width: 95%;
     }
 }
 @media screen and (max-width: 865px) {
