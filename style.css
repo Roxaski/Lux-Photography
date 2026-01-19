@@ -297,17 +297,12 @@ section {
 #price-icons .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    column-gap: 2rem;
     margin: 100px auto;
 }
 #price-icons .grid-container i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(3.25rem, 3vw, 4.25rem);
+    font-size: clamp(3.75rem, 3vw, 4.25rem);
     margin: 10px auto;
-}
-#price-icons .grid-container i:before {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -320,25 +315,23 @@ section {
 #price-icons .grid-container .right {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    text-transform: capitalize;
-}
-#price-icons .grid-container .left span,
-#price-icons .grid-container .center span,
-#price-icons .grid-container .right span {
-    font-weight: 400;
-    font-size: clamp(1rem, 3vw, 1.2rem);
-    margin-top: .5rem;
     letter-spacing: .15px;
 }
-#price-icons .grid-container .left p,
-#price-icons .grid-container .center p,
-#price-icons .grid-container .right p {
-    line-height: 2;
+#price-icons .grid-container .left h2,
+#price-icons .grid-container .center h2,
+#price-icons .grid-container .right h2 {
+    font-weight: 500;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    margin-top: .5rem;
+}
+#price-icons .grid-container .left h3,
+#price-icons .grid-container .center h3,
+#price-icons .grid-container .right h3 {
+    text-align: center;
     font-weight: 300;
     font-size: clamp(1rem, 3vw, 1.1rem);
-    text-align: center;
+    margin-top: 1rem;
 }
 #memories .grid-container {
     display: grid;
@@ -429,7 +422,7 @@ footer {
 }
 footer .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
     align-content: center;
     justify-content: center;
@@ -444,10 +437,11 @@ footer h2 {
 }
 footer .about p {
     font-size: clamp(.8rem, 3vw, .85rem);
+    font-weight: 300;
     letter-spacing: .25px;
     line-height: 1.6;
     margin-top: .5rem;
-    width: 95%;
+    width: 22rem;
 }
 footer .about ul {
     display: flex;
@@ -546,12 +540,17 @@ footer .quick-links ul li {
     footer {
         padding: 1rem 1.5rem;
     }
+    footer .about p {
+        width: 95%;
+    }
 }
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 965px) {
     #price-icons .grid-container {
         grid-template-columns: 1fr;
-        gap: 7rem;
+        gap: 5rem;
     }
+}
+@media screen and (max-width: 725px) {
     footer .grid-container {
         grid-template-columns: 1fr;
         gap: 3rem 10rem;
