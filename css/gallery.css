@@ -108,13 +108,14 @@ body {
     justify-content: center;
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.75rem;
     height: 2rem;
     width: 1.25rem;
     background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    z-index: 1;
+    border: none;
+    z-index: 2;
 }
 .bars {
     position: relative;
@@ -176,7 +177,7 @@ nav.active .hamburger-menu .bars::after {
     max-width: 600px;
     z-index: 3;
 }
-.lightbox img {
+.lightbox > img {
     display: none;
     max-width: 90vw;
     max-height: 85vh;
@@ -185,23 +186,33 @@ nav.active .hamburger-menu .bars::after {
     object-fit: contain;
     cursor: default;
 }
-.lightbox img.active {
+.lightbox > img.active {
     display: block;
 }
 .lightbox .btn {
-    display: none;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 3rem;
+    background: var(--clr-blk);
+    border: none;
     color: var(--clr-white);
     cursor: pointer;
+    visibility: hidden;
+    pointer-events: none;
+}
+.lightbox .btn .chevron {
+    width: 3rem;
+    height: auto;
+}
+.lightbox .btn.visible {
+    visibility: visible;
+    pointer-events: auto;
 }
 .lightbox .previous {
-    left: -4rem;
+    left: -5rem;
 }
 .lightbox .next {
-    right: -4rem;
+    right: -5rem;
 }
 .overlay {
     display: none;

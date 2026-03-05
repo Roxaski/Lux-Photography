@@ -73,15 +73,15 @@ function imagePreview() {
 // removes the buttons from the first and last lightbox images
 function displayGalleryBtns() {
     if(currentImage == 0) {
-        previousBtn.style.display = 'none';
+        previousBtn.classList.remove('visible');
     } else {
-        previousBtn.style.display = 'block';
+        previousBtn.classList.add('visible');
     };
 
     if(currentImage == galleryImgs.length - 1) {
-        nextBtn.style.display = 'none';
+        nextBtn.classList.remove('visible');
     } else {
-        nextBtn.style.display = 'block';
+        nextBtn.classList.add('visible');
     };
 };
 
@@ -107,8 +107,8 @@ function closeOverlay() {
     lightbox.alt = '';
     lightbox.classList.remove('active');
     overlay.classList.remove('active');
-    nextBtn.style.display = 'none';
-    previousBtn.style.display = 'none';
+    nextBtn.classList.remove('visible');
+    previousBtn.classList.remove('visible');
 };
 
 // closes the overlay
