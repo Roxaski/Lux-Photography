@@ -52,7 +52,7 @@ function preload(imageIndex) {
 // displays an overlay
 function displayOverlay() {
     document.body.style.overflow = 'hidden';
-    overlay.style.display = 'block';
+    overlay.classList.add('active');
 };
 
 // displays image & buttons
@@ -106,7 +106,7 @@ function closeOverlay() {
     lightbox.srcset = '';
     lightbox.alt = '';
     lightbox.classList.remove('active');
-    overlay.style.display = 'none';
+    overlay.classList.remove('active');
     nextBtn.style.display = 'none';
     previousBtn.style.display = 'none';
 };
@@ -114,30 +114,6 @@ function closeOverlay() {
 // closes the overlay
 overlay.addEventListener('click', () => {
     closeOverlay();
-});
-
-// stores the value of the timeout ID which is used to delay the image resize from triggering too often
-let timeoutID;
-
-window.addEventListener('resize', () => {
-    // clears the timeoutID after it's initially triggered
-    clearTimeout(timeoutID);
-
-    // triggers the timeout only if the lightbox is displayed
-    if(overlay.style.display == 'block') {
-        // added active class to gallery to help with flickering during resize
-        gallery.classList.add('active');
-
-        // re-render image then show the content after a short delay set by the timeout below
-        timeoutID = setTimeout(() => {
-            imagePreview();
-
-            // removes the active class on the next repaint
-            requestAnimationFrame(() => {
-                gallery.classList.remove('active');
-            });
-        }, 100); // 100ms delay before the next resize can happen
-    }
 });
 
 // stores the value of where the finger touches the screen
@@ -168,7 +144,7 @@ lightbox.addEventListener('touchend', (e) => {
         currentImage ++;
         imagePreview();
         preload(currentImage + 1);
-    // Else if you swipe to the right and aren't on the first image, then it displays the previous image
+    // else if you swipe to the right and aren't on the first image, then it displays the previous image
     } else if (swipeToChangeImg < -minSwipe && currentImage > 0) {
         currentImage --;
         imagePreview();
@@ -178,14 +154,16 @@ lightbox.addEventListener('touchend', (e) => {
 
 // image navigation using the arrows keys
 window.addEventListener('keydown', (e) => {
-    if(overlay.style.display == 'block' && e.key == 'ArrowRight' &&  currentImage < galleryImgs.length - 1) {
+    if(overlay.classList.contains('active') && e.key == 'ArrowRight' &&  currentImage < filteredGallery.length - 1) {
         currentImage ++;
         imagePreview();
-        preload(currentImage + 1);
-    } else if (overlay.style.display == 'block' && e.key == 'ArrowLeft' && currentImage > 0) {
+        preload(currentImage +1);
+
+    } else if (overlay.classList.contains('active') && e.key == 'ArrowLeft' && currentImage > 0) {
         currentImage --;
         imagePreview();
-        preload(currentImage - 1);
+        preload(currentImage -1);
+
     } else if (e.key == 'Escape') {
         closeOverlay();
     };
