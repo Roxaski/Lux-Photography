@@ -1,31 +1,40 @@
 const contentWrapper = document.querySelector('.content-wrapper');
-let cardAnimation = false;
+let animationIsPlaying;
 
 /*
-    toggles the cards content with a timeout, 
-    to prevent rapid toggling during animations transitions
+    lets you open the photographer cards with either a click or the enter or space keys,
+    by toggling and active class and checking if the animation is playing or not and adding a 250ms timeout
 */
-function toggleCard(card) {
-    if (!card || cardAnimation) return;
-    
-    cardAnimation = true;
-    card.classList.toggle('active');
-    
-    setTimeout(() => {
-        cardAnimation = false;
-    }, 250);
-};
 
-// toggles card content with a click
-document.querySelector('.content-wrapper').addEventListener('click', e => {
-  const card = e.target.closest('.card');
-    if (!card) return;
-    card.classList.toggle('active');
+contentWrapper.addEventListener('click', (e) => {
+    if(animationIsPlaying) {
+        return;
+    };
+
+    const card = e.target.closest('.card');
+
+    if(card) {
+        animationIsPlaying = true;
+        card.classList.toggle('active');
+        setTimeout(() => {
+            animationIsPlaying = false;
+        }, 250);
+    };
 });
 
-// toggles card content with enter key for accessibility
-document.querySelector('.content-wrapper').addEventListener('keydown', e => {
-  const card = e.target.closest('.card');
-  if (!card) return;
-  card.classList.toggle('active');
+contentWrapper.addEventListener('keydown', (e) => {
+    if(animationIsPlaying) {
+        return;
+    };
+
+    const card = e.target.closest('.card');
+
+    if(card && e.key === 'Enter' || card && e.key === ' ') {
+        e.preventDefault();
+        animationIsPlaying = true;
+        card.classList.toggle('active');
+        setTimeout(() => {
+            animationIsPlaying = false;
+        }, 250);
+    };
 });
