@@ -267,7 +267,9 @@ footer .about ul {
 footer ul li {
     list-style: none;
 }
-footer .about ul li i {
+footer .about ul li svg {
+    width: 1.1rem;
+    height: auto;
     margin-right: 2rem;
 }
 footer .quick-links ul li {

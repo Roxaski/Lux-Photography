@@ -116,13 +116,14 @@ body {
     justify-content: center;
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.75rem;
     height: 2rem;
     width: 1.25rem;
     background-color: transparent;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
-    z-index: 2;
+    border: none;
+    z-index: 3;
 }
 .bars {
     position: relative;
@@ -172,6 +173,7 @@ nav.active .hamburger-menu .bars::after {
     font-family: 'Poppins', sans-serif;
     overflow: visible;
     transition: transform 250ms ease;
+    cursor: pointer;
 }
 .card .more-info {
     position: absolute;
@@ -196,8 +198,9 @@ nav.active .hamburger-menu .bars::after {
     opacity: 0;
     transition: opacity 250ms ease;
 }
-.card .more-info i {
+.card .more-info .chevron {
     color: var(--clr-lightGrey);
+    margin: .35rem auto;
 }
 .card .img-container {
     position: absolute;
@@ -274,7 +277,9 @@ footer .about ul {
 footer ul li {
     list-style: none;
 }
-footer .about ul li i {
+footer .about ul li svg {
+    width: 1.1rem;
+    height: auto;
     margin-right: 2rem;
 }
 footer .quick-links ul li {
@@ -435,5 +440,8 @@ footer .quick-links ul li {
     }
     .card .img-container img {
         color: var(--clr-offWhite);
+    }
+    .card .more-info .chevron {
+        color: var(--clr-grey);
     }
 }
