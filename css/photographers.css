@@ -182,15 +182,15 @@ nav.active .hamburger-menu .bars::after {
     text-align: center;
     transition: opacity 250ms ease;
 }
-.card .more-info h1 {
+.card .more-info h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-.card .more-info h1:nth-child(1) {
+.card .more-info h2:nth-child(1) {
     font-weight: 300;
     font-size: clamp(.9rem, 3vw, 1rem);
 }
-.card .more-info h1:nth-child(2) {
+.card .more-info h2:nth-child(2) {
     font-weight: 300;
     font-size: .8rem;
 }
@@ -308,7 +308,7 @@ footer .quick-links ul li {
         height: auto;
         margin-bottom: 0;
     }
-    .mobile-header h1 {
+    .mobile-header h2 {
         position: relative;
         left: .75rem;
         font-weight: 500;
