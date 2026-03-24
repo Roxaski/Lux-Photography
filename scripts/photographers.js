@@ -1,4 +1,4 @@
-const contentWrapper = document.querySelector('.content-wrapper');
+const wrapper = document.querySelector('.wrapper');
 let animationIsPlaying;
 
 /*
@@ -6,7 +6,7 @@ let animationIsPlaying;
     by toggling and active class and checking if the animation is playing or not and adding a 250ms timeout
 */
 
-contentWrapper.addEventListener('click', (e) => {
+wrapper.addEventListener('click', (e) => {
     if(animationIsPlaying) {
         return;
     };
@@ -22,7 +22,7 @@ contentWrapper.addEventListener('click', (e) => {
     };
 });
 
-contentWrapper.addEventListener('keydown', (e) => {
+wrapper.addEventListener('keydown', (e) => {
     if(animationIsPlaying) {
         return;
     };
