@@ -58,9 +58,6 @@ body {
     color: var(--clr-blk);
     cursor: default;
 }
-.wrapper {
-    max-width: 90rem;
-}
 .mobile-header {
     display: none;
 }
@@ -86,7 +83,6 @@ body {
     color: var(--clr-darkGrey);
     text-decoration: none;
     letter-spacing: 2px;
-    transition: 350ms ease all;
     -webkit-tap-highlight-color: transparent;
 }
 .links ul li a::before {
@@ -97,7 +93,7 @@ body {
     width: 0;
     height: .5px;
     background-color: var(--clr-darkGrey);
-    transition: 350ms ease;
+    transition: width 350ms ease, left 350ms ease;
 }
 .links ul li a:hover::before {
     width: 100%;
@@ -133,7 +129,7 @@ body {
     width: 100%;
     border-radius: 5px;
     background-color: var(--clr-white);
-    transition: 350ms ease;
+    transition: transform 350ms ease;
 }
 .bars::before {
     transform: translateY(-4px);
@@ -147,11 +143,12 @@ nav.active .hamburger-menu .bars::before {
 nav.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
-.content-wrapper {
+.wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     background: var(--clr-darkGrey);
     width: 80%;
+    max-width: 90rem;
     margin: 100px auto 140px;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
@@ -221,7 +218,6 @@ nav.active .hamburger-menu .bars::after {
     border: none;
     border-radius: 2px;
     text-transform: uppercase;
-    transition: 250ms ease-out;
     -webkit-tap-highlight-color: transparent;
 }
 footer {
@@ -302,7 +298,9 @@ footer .quick-links ul li {
         text-decoration: none;
     }
     nav.active .links {
-        transform: translateX(0);
+        transform: translate(0);
+        visibility: visible;
+        transition: transform 350ms ease, visibility 0s;
     }
     .links {
         display: flex;
@@ -315,9 +313,10 @@ footer .quick-links ul li {
         width: 100%;
         background-color: var(--clr-white);
         transform: translateX(100%);
-        transition: 300ms;
+        transition: transform 350ms ease, visibility 0s linear 350ms;
         overflow-y: auto;
         z-index: 1;
+        visibility: hidden;
     }
     .links ul {
         position: relative;
@@ -340,7 +339,7 @@ footer .quick-links ul li {
     .hamburger-menu {
         display: flex;
     }
-    .content-wrapper {
+    .wrapper {
         grid-template-columns: 1fr;
         max-width: 700px;
         margin: 75px auto;

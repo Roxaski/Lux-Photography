@@ -65,9 +65,6 @@ body {
     color: var(--clr-blk);
     cursor: default;
 }
-.wrapper {
-    max-width: 90rem;
-}
 .mobile-header {
     display: none;
 }
@@ -93,7 +90,6 @@ body {
     color: var(--clr-darkGrey);
     text-decoration: none;
     letter-spacing: 2px;
-    transition: 350ms ease all;
     -webkit-tap-highlight-color: transparent;
 }
 .links ul li a::before {
@@ -104,7 +100,7 @@ body {
     width: 0;
     height: .5px;
     background-color: var(--clr-darkGrey);
-    transition: 350ms ease;
+    transition: width 350ms ease, left 350ms ease;
 }
 .links ul li a:hover::before {
     width: 100%;
@@ -140,7 +136,7 @@ body {
     width: 100%;
     border-radius: 5px;
     background-color: var(--clr-white);
-    transition: 350ms ease;
+    transition: transform 350ms ease;
 }
 .bars::before {
     transform: translateY(-4px);
@@ -154,9 +150,10 @@ nav.active .hamburger-menu .bars::before {
 nav.active .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
-.content-wrapper {
+.wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    max-width: 90rem;
     margin: 125px auto;
 }
 .card {
@@ -308,7 +305,7 @@ footer .quick-links ul li {
         height: auto;
         margin-bottom: 0;
     }
-    .mobile-header h2 {
+    .mobile-header h1 {
         position: relative;
         left: .75rem;
         font-weight: 500;
@@ -319,7 +316,9 @@ footer .quick-links ul li {
         text-decoration: none;
     }
     nav.active .links {
-        transform: translateX(0);
+        transform: translate(0);
+        visibility: visible;
+        transition: transform 350ms ease, visibility 0s;
     }
     .links {
         display: flex;
@@ -332,9 +331,10 @@ footer .quick-links ul li {
         width: 100%;
         background-color: var(--clr-white);
         transform: translateX(100%);
-        transition: 300ms;
+        transition: transform 350ms ease, visibility 0s linear 350ms;
         overflow-y: auto;
-        z-index: 2;
+        z-index: 1;
+        visibility: hidden;
     }
     .links ul {
         position: relative;
@@ -357,7 +357,7 @@ footer .quick-links ul li {
     .hamburger-menu {
         display: flex;
     }
-    .content-wrapper {
+    .wrapper {
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
         gap: 7rem;
@@ -380,7 +380,7 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 725px) {
-    .content-wrapper {
+    .wrapper {
         grid-template-columns: 1fr;
         gap: 7rem;
     }

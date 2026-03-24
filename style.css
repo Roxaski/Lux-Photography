@@ -84,7 +84,6 @@ body {
     color: var(--clr-white);
     text-decoration: none;
     letter-spacing: 2px;
-    transition: 350ms ease all;
     -webkit-tap-highlight-color: transparent;
 }
 .links ul li a::before {
@@ -95,7 +94,7 @@ body {
     width: 0;
     height: .5px;
     background-color: var(--clr-grey);
-    transition: 350ms ease;
+    transition: width 350ms ease, left 350ms ease;
 }
 .links ul li a:hover::before {
     width: 100%;
@@ -131,7 +130,7 @@ body {
     width: 100%;
     border-radius: 5px;
     background-color: var(--clr-white);
-    transition: 350ms ease;
+    transition: transform 350ms ease;
 }
 .bars::before {
     transform: translateY(-4px);
@@ -465,7 +464,9 @@ footer .quick-links ul li {
         overflow-y: hidden;
     }
     nav.active .links {
-        transform: translateX(0);
+        transform: translate(0);
+        visibility: visible;
+        transition: transform 350ms ease, visibility 0s;
     }
     .links {
         display: flex;
@@ -478,9 +479,10 @@ footer .quick-links ul li {
         width: 100%;
         background-color: var(--clr-white);
         transform: translateX(100%);
-        transition: 300ms;
+        transition: transform 350ms ease, visibility 0s linear 350ms;
         overflow-y: auto;
         z-index: 1;
+        visibility: hidden;
     }
     .links ul {
         position: relative;
