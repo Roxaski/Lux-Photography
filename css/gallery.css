@@ -194,7 +194,7 @@ nav.active .hamburger-menu .bars::after {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--clr-blk);
+    background: transparent;
     border: none;
     color: var(--clr-white);
     cursor: pointer;
@@ -216,7 +216,8 @@ nav.active .hamburger-menu .bars::after {
     right: -14rem;
 }
 .overlay {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     position: fixed;
     inset: 0;
     width: 100%;
@@ -225,7 +226,8 @@ nav.active .hamburger-menu .bars::after {
     z-index: 2;
 }
 .overlay.active {
-    display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 footer {
     background: var(--clr-darkGrey);
@@ -401,7 +403,7 @@ footer .quick-links ul li {
         width: 80vw;
         height: auto;
     }
-    .lightbox .btn i {
+    .lightbox .btn {
         display: none;
     }
 }
