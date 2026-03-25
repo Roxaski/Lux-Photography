@@ -11,11 +11,16 @@ function toggleHamburgerMenu() {
     nav.classList.toggle('active');
     const active = nav.classList.contains('active');
     document.body.classList.toggle('no-scroll');
-    // prevents these elements from being focused, clicked, or read by screen readers
-    hero.inert = active;
-    main.inert = active;
+    
+     // if the these elements exists, it prevents them from being focused
+    if (hero) {
+        hero.inert = active;
+    };
 
-    // if the this element exists, and if it does it prevents it from being focused 
+    if (main) {
+        main.inert = active;
+    };
+
     if (mobileHeader) {
         mobileHeader.inert = active;
     };
