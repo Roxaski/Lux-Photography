@@ -93,7 +93,7 @@ function preloadAdjacentImgs() {
     while also setting the tab index back to 0 to allow the images in the gallery to be tabbed to
 */
 function closeLightbox () {
-    document.body.classList.remove('no-scroll');
+    document.body.classList.remove('lightbox-no-scroll');
     overlay.style.transition = 'none';
     overlay.classList.remove('active');
     lightbox.classList.remove('active');
