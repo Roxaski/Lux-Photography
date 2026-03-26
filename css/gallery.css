@@ -58,6 +58,7 @@ body {
     height: 100vh;
     background-color: var(--clr-offWhite);
     color: var(--clr-blk);
+    scrollbar-gutter: stable;
     cursor: default;
 }
 .mobile-header {
@@ -164,6 +165,7 @@ nav.active .hamburger-menu .bars::after {
     color: var(--clr-blk);
     cursor: pointer;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    contain: layout;
 }
 .lightbox {
     display: flex;
