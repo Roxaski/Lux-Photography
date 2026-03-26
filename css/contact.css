@@ -172,14 +172,12 @@ nav.active .hamburger-menu .bars::after {
     padding: .25rem;
 }
 .right h1 {
-    position: relative;
-    top: .5rem;
+    margin: 7px auto;
     text-transform: uppercase;
     font-weight: 300;
     color: var(--clr-offWhite);
     font-size: clamp(1.1rem, 3vw, 1.3rem);
     letter-spacing: 1px;
-    margin-bottom: .75rem;
 }
 .right .contact-form {
     display: flex;
@@ -205,11 +203,11 @@ nav.active .hamburger-menu .bars::after {
     color: var(--clr-darkGrey);
 }
 .right .contact-form textarea {
+    vertical-align: top;
     min-height: 95px;
     resize: none;
 }
 .right .contact-form button {
-    display: block;
     width: 98%;
     padding: .55rem;
     letter-spacing: .5px;
@@ -219,6 +217,7 @@ nav.active .hamburger-menu .bars::after {
     border-radius: 2px;
     text-transform: uppercase;
     -webkit-tap-highlight-color: transparent;
+    margin-top: .25rem;
 }
 footer {
     background: var(--clr-darkGrey);
@@ -348,15 +347,12 @@ footer .quick-links ul li {
         padding: .5rem .5rem .15rem .5rem;
     }
     .right h1 {
-        top: 0;
+        margin: 0 auto 10px;
     }
     .right .contact-form input,
     .right .contact-form textarea,
     .right .contact-form button {
         width: 100%;
-    }
-    .right .contact-form button {
-        margin: 0;
     }
     footer .grid-container {
         grid-template-columns: repeat(2, 1fr);
