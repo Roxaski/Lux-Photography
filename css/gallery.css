@@ -50,9 +50,6 @@
     border-radius: 5px;
     background-color: var(--clr-lightBrown);
 }
-.no-scroll {
-    overflow-y: hidden;
-}
 body {
     width: 100%;
     height: 100vh;
