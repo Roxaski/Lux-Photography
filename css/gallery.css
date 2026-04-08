@@ -218,11 +218,13 @@ nav.active .hamburger-menu .bars::after {
 }
 .lightbox .previous {
     left: 0;
-    transform: translateY(-50%) translateX(-100%);
+    transform: translateY(-50%);
+    margin-left: -5rem;
 }
 .lightbox .next {
     right: 0;
-    transform: translateY(-50%) translateX(100%);
+    transform: translateY(-50%);
+    margin-right: -5rem;
 }
 .overlay {
     opacity: 0;
@@ -243,9 +245,6 @@ footer {
     color: var(--clr-offWhite);
     font-family: 'Poppins', sans-serif;
     padding: 1.75rem 2.5rem;
-}
-footer.active {
-    opacity: 0;
 }
 footer .grid-container {
     display: grid;
