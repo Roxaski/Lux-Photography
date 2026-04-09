@@ -153,9 +153,6 @@ nav.active .hamburger-menu .bars::after {
     margin: 40px auto;
     padding: 0 1.1rem;
 }
-.gallery.active {
-    opacity: 0;
-}
 .gallery img {
     width: 100%;
     height: auto;
@@ -178,7 +175,6 @@ nav.active .hamburger-menu .bars::after {
 }
 .lightbox-no-scroll {
     overflow: hidden;
-    pointer-events: none;
 }
 .lightbox-no-scroll .lightbox,
 .lightbox-no-scroll .lightbox img,
