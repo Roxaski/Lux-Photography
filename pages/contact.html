@@ -69,15 +69,23 @@
             </div>
 
             <div class="right">
-                <h1>contact form</h1>
+                <h2>contact form</h2>
 
                 <div class="contact-form">
-                    <form aria-hidden="true" action="#">
-                        <input tabindex="-1" name="name" type="text" placeholder="Name" autocomplete="off">
-                        <input tabindex="-1" name="email" type="text" placeholder="Email" autocomplete="off">
-                        <input tabindex="-1" name="phone number" type="text" placeholder="Phone Number" maxlength="11" autocomplete="off">
-                        <textarea tabindex="-1" name="user message" placeholder="Insert your message here" maxlength="500"></textarea>
-                        <button tabindex="-1" type="button">submit</button>
+                    <form>
+                        <label for="name" class="screen-reader-label">name</label>
+                        <input id="name" name="name" type="text" placeholder="Name" autocomplete="name">
+
+                        <label for="email" class="screen-reader-label">email</label>
+                        <input id="email" name="email" type="email" placeholder="Email" autocomplete="email">
+
+                        <label for="phoneNumber" class="screen-reader-label">phone number</label>
+                        <input id="phoneNumber" name="phone number" type="tel" placeholder="Phone Number" maxlength="11" autocomplete="tel">
+
+                        <label for="messageContents" class="screen-reader-label">message contents</label>
+                        <textarea id="messageContents" name="user message" placeholder="Insert your message here" maxlength="500"></textarea>
+
+                        <button type="button">submit</button>
                     </form>
                 </div>
             </div>
