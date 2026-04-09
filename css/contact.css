@@ -171,7 +171,7 @@ nav.active .hamburger-menu .bars::after {
     flex-direction: column;
     padding: .25rem;
 }
-.right h1 {
+.right h2 {
     margin: 7px auto;
     text-transform: uppercase;
     font-weight: 300;
@@ -183,6 +183,12 @@ nav.active .hamburger-menu .bars::after {
     display: flex;
     flex-direction: column;
     margin-bottom: .45rem;
+}
+.right .screen-reader-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 .right .contact-form input,
 .right .contact-form textarea {
@@ -200,7 +206,8 @@ nav.active .hamburger-menu .bars::after {
 }
 .right .contact-form input::placeholder,
 .right .contact-form textarea::placeholder {
-    color: var(--clr-darkGrey);
+    color: var(--clr-lightGrey);
+    font-weight: 300;
 }
 .right .contact-form textarea {
     vertical-align: top;
@@ -346,7 +353,7 @@ footer .quick-links ul li {
     .right {
         padding: .5rem .5rem .15rem .5rem;
     }
-    .right h1 {
+    .right h2 {
         margin: 0 auto 10px;
     }
     .right .contact-form input,
