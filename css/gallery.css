@@ -176,11 +176,6 @@ nav.active .hamburger-menu .bars::after {
 .lightbox-no-scroll {
     overflow: hidden;
 }
-.lightbox-no-scroll .lightbox,
-.lightbox-no-scroll .lightbox img,
-.lightbox-no-scroll .overlay {
-    pointer-events: auto;
-}
 .lightbox > img {
     display: none;
     max-width: 90vw;
@@ -358,9 +353,7 @@ footer .quick-links ul li {
     .gallery {
         margin: 75px auto;
     }
-    .lightbox img {
-        max-width: 90vw;
-        height: auto;
+    .lightbox > img {
         margin: 0 auto;
     }
     .lightbox .btn {
