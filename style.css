@@ -165,7 +165,8 @@ nav.active .hamburger-menu .bars::after {
     margin: 120px auto;
     text-align: center;
 }
-.hero-section .title h1 {
+.hero-section .title h1,
+.hero-section .title h2 {
     font-size: clamp(1rem, 3vw, 2rem);
     font-weight: 400;
     text-transform: uppercase;
