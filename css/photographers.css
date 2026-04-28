@@ -251,10 +251,10 @@ footer .grid-container {
     align-content: center;
     justify-content: center;
 }
-footer h2 {
+footer h3 {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(.8rem, 3vw, .9rem);
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .5px;
     line-height: 2;
     text-transform: uppercase;
