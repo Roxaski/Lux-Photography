@@ -182,14 +182,13 @@ nav.active .hamburger-menu .bars::after {
 .card .more-info h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
-}
-.card .more-info h2:nth-child(1) {
-    font-weight: 300;
     font-size: clamp(.9rem, 3vw, 1rem);
-}
-.card .more-info h2:nth-child(2) {
     font-weight: 300;
-    font-size: .8rem;
+}
+.card .more-info p {
+    font-weight: 300;
+    font-size: clamp(.8rem, 3vw, .95rem);
+    text-transform: capitalize;
 }
 .card.active .more-info {
     opacity: 0;
@@ -443,5 +442,25 @@ footer .quick-links ul li {
     }
     .card .more-info .chevron {
         color: var(--clr-grey);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .bars::before,
+    .bars::after {
+        transition: none;
+    }
+    nav .links,
+    nav.active .links {
+        transition: none;
+    }
+    .links ul li a::before {
+        transition: none;
+    }
+    .card,
+    .card .more-info,
+    .card.active .more-info,
+    .card .img-container,
+    .card .content {
+        transition: none;
     }
 }

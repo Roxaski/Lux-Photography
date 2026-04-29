@@ -325,13 +325,13 @@ section {
 #price-icons .grid-container .left h2,
 #price-icons .grid-container .center h2,
 #price-icons .grid-container .right h2 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: clamp(1.1rem, 3vw, 1.3rem);
     margin-top: .5rem;
 }
-#price-icons .grid-container .left h3,
-#price-icons .grid-container .center h3,
-#price-icons .grid-container .right h3 {
+#price-icons .grid-container .left p,
+#price-icons .grid-container .center p,
+#price-icons .grid-container .right p {
     text-align: center;
     font-weight: 300;
     font-size: clamp(1rem, 3vw, 1.1rem);
@@ -529,6 +529,17 @@ footer .quick-links ul li {
         gap: 2rem;
     }
 }
+@media screen and (max-width: 1125px) {
+    #price-icons .grid-container {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+    #price-icons .grid-container .left p,
+    #price-icons .grid-container .center p,
+    #price-icons .grid-container .right p {
+        width: 75%;
+    }
+}
 @media screen and (max-width: 990px) {
     .hero-section .title {
         margin: 50px auto;
@@ -551,12 +562,6 @@ footer .quick-links ul li {
     }
     footer .about p {
         width: 95%;
-    }
-}
-@media screen and (max-width: 965px) {
-    #price-icons .grid-container {
-        grid-template-columns: 1fr;
-        gap: 5rem;
     }
 }
 @media screen and (max-width: 725px) {
@@ -650,5 +655,33 @@ footer .quick-links ul li {
         color: var(--clr-offWhite);
         background: var(--clr-darkGrey);
         border-top: solid 1.5px var(--clr-grey);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .bars::before,
+    .bars::after {
+        transition: none;
+    }
+    nav .links,
+    nav.active .links {
+        transition: none;
+    }
+    .links ul li a::before {
+        transition: none;
+    }
+    .hero-section .title .chevron {
+        animation: none;
+        visibility: visible;
+    }
+    .hero-section #fade_in_animation_one,
+    .hero-section #fade_in_animation_two {
+        animation: none;
+    }
+    #discover .img-wrapper img,
+    #discover .img-wrapper:hover img {
+        transition: none;
+    }
+    #discover .img-wrapper:hover img.zoom {
+        transform: scale(1);
     }
 }

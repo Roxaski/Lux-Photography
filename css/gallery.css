@@ -449,3 +449,16 @@ footer .quick-links ul li {
         color: var(--clr-offWhite);
     }
 }
+@media (prefers-reduced-motion: reduce) {
+    .bars::before,
+    .bars::after {
+        transition: none;
+    }
+    nav .links,
+    nav.active .links {
+        transition: none;
+    }
+    .links ul li a::before {
+        transition: none;
+    }
+}
