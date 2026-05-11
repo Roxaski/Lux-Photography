@@ -137,10 +137,10 @@ body {
 .bars::after {
     transform: translateY(4px);
 }
-nav.active .hamburger-menu .bars::before {
+nav.menu-open .hamburger-menu .bars::before {
     transform: translateY(0) rotate(45deg);
 }
-nav.active .hamburger-menu .bars::after {
+nav.menu-open .hamburger-menu .bars::after {
     transform: translateY(0) rotate(-45deg);
 }
 .wrapper {
@@ -308,7 +308,7 @@ footer .quick-links ul li {
         color: var(--clr-white);
         text-decoration: none;
     }
-    nav.active .links {
+    nav.menu-open .links {
         transform: translate(0);
         visibility: visible;
         transition: transform 350ms ease, visibility 0s;
@@ -343,8 +343,8 @@ footer .quick-links ul li {
     .links ul li a::before {
         content: none;
     }
-    nav.active .bars::before,
-    nav.active .bars::after {
+    nav.menu-open .bars::before,
+    nav.menu-open .bars::after {
         background-color: var(--clr-blk);
     }
     .hamburger-menu {
@@ -353,15 +353,17 @@ footer .quick-links ul li {
     .gallery {
         margin: 75px auto;
     }
+    footer .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 1150px) {
     .lightbox > img {
         margin: 0 auto;
     }
     .lightbox .btn {
         display: none;
-    }
-    footer .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
     }
 }
 @media screen and (max-width: 990px) {
@@ -441,8 +443,8 @@ footer .quick-links ul li {
     .bars::after {
         background-color: var(--clr-grey);
     }
-    nav.active .hamburger-menu .bars::before,
-    nav.active .hamburger-menu .bars::after {
+    nav.menu-open .hamburger-menu .bars::before,
+    nav.menu-open .hamburger-menu .bars::after {
         background-color: var(--clr-grey);
     }
     .gallery img {
@@ -455,7 +457,7 @@ footer .quick-links ul li {
         transition: none;
     }
     nav .links,
-    nav.active .links {
+    nav.menu-open .links {
         transition: none;
     }
     .links ul li a::before {
