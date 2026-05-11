@@ -314,7 +314,7 @@ footer .quick-links ul li {
         color: var(--clr-white);
         text-decoration: none;
     }
-    nav.active .links {
+    nav.menu-open .links {
         transform: translate(0);
         visibility: visible;
         transition: transform 350ms ease, visibility 0s;
@@ -349,8 +349,8 @@ footer .quick-links ul li {
     .links ul li a::before {
         content: none;
     }
-    nav.active .bars::before,
-    nav.active .bars::after {
+    nav.menu-open .bars::before,
+    nav.menu-open .bars::after {
         background-color: var(--clr-blk);
     }
     .hamburger-menu {
@@ -430,8 +430,8 @@ footer .quick-links ul li {
     .bars::after {
         background-color: var(--clr-grey);
     }
-    nav.active .hamburger-menu .bars::before,
-    nav.active .hamburger-menu .bars::after {
+    nav.menu-open .hamburger-menu .bars::before,
+    nav.menu-open .hamburger-menu .bars::after {
         background-color: var(--clr-grey);
     }
     .card {
@@ -450,7 +450,7 @@ footer .quick-links ul li {
         transition: none;
     }
     nav .links,
-    nav.active .links {
+    nav.menu-open .links {
         transition: none;
     }
     .links ul li a::before {
