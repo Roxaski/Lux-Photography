@@ -48,16 +48,6 @@
     --clr-darkGrey: #313030;
     --clr-lightBrown: #a68e8e;
 }
-::-webkit-scrollbar {
-    width: 8px;
-}
-::-webkit-scrollbar-track {
-    background-color: var(--clr-white);
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: var(--clr-lightBrown);
-}
 body {
     width: 100%;
     height: 100vh;
@@ -621,12 +611,6 @@ footer .quick-links ul li {
     }
 }
 @media screen and (prefers-color-scheme: dark) {
-    ::-webkit-scrollbar-track {
-        background-color: var(--clr-blk);
-    }
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--clr-grey);
-    }
     body {
         color: var(--clr-grey);
         background-color: var(--clr-blk);
