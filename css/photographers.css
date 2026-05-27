@@ -50,10 +50,17 @@
 }
 body {
     width: 100%;
+    max-width: 90rem;
     height: 100vh;
     background-color: var(--clr-offWhite);
     color: var(--clr-blk);
     cursor: default;
+}
+nav.menu-open .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(45deg);
+}
+nav.menu-open .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(-45deg);
 }
 .mobile-header {
     display: none;
@@ -109,7 +116,10 @@ body {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     border: none;
-    z-index: 3;
+    z-index: 2;
+}
+.hamburger-menu:focus:not(:focus-visible) {
+    outline: none;
 }
 .bars {
     position: relative;
@@ -134,16 +144,9 @@ body {
 .bars::after {
     transform: translateY(4px);
 }
-nav.active .hamburger-menu .bars::before {
-    transform: translateY(0) rotate(45deg);
-}
-nav.active .hamburger-menu .bars::after {
-    transform: translateY(0) rotate(-45deg);
-}
-.wrapper {
+.content-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 90rem;
     margin: 125px auto;
 }
 .card {
@@ -346,7 +349,7 @@ footer .quick-links ul li {
     .hamburger-menu {
         display: flex;
     }
-    .wrapper {
+    .content-wrapper {
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
         gap: 7rem;
@@ -369,7 +372,7 @@ footer .quick-links ul li {
     }
 }
 @media screen and (max-width: 725px) {
-    .wrapper {
+    .content-wrapper {
         grid-template-columns: 1fr;
         gap: 7rem;
     }
