@@ -16,15 +16,15 @@ function toggleHamburgerMenu() {
     
      // if the these elements exists, it prevents them from being focused
      if (main) {
-        main.inert = menuOpen;
+        main.inert = !menuOpen;
     };
 
     if (hero) {
-        hero.inert = menuOpen;
+        hero.inert = !menuOpen;
     };
 
     if (mobileHeader) {
-        mobileHeader.inert = menuOpen;
+        mobileHeader.inert = !menuOpen;
     };
 
     // adds or removes the esc key event listener when the hamburger menu is open or closed
@@ -32,7 +32,6 @@ function toggleHamburgerMenu() {
         document.addEventListener('keydown', escapeKeyPress);
     } else {
         document.removeEventListener('keydown', escapeKeyPress);
-        menu.focus();
     };
 };
 
