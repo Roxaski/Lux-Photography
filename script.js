@@ -29,9 +29,9 @@ function toggleHamburgerMenu() {
 
     // adds or removes the esc key event listener when the hamburger menu is open or closed
     if (menuOpen) {
-        document.addEventListener('keydown', escapeKeyPress);
-    } else {
         document.removeEventListener('keydown', escapeKeyPress);
+    } else {
+        document.addEventListener('keydown', escapeKeyPress);
     };
 };
 

@@ -116,7 +116,7 @@ nav.menu-open .hamburger-menu .bars::after {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     border: none;
-    z-index: 2;
+    z-index: 3;
 }
 .hamburger-menu:focus:not(:focus-visible) {
     outline: none;
