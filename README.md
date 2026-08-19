@@ -1,4 +1,6 @@
-<img width="1920" height="1080" alt="github_read me" src="https://github.com/user-attachments/assets/88e3a171-a124-49e5-8870-b0a2bbd27617" />
+![Lux Photography](https://github.com/user-attachments/assets/668dbf72-6780-4a2f-9e48-dd07337d14cc#gh-light-mode-only)
+
+![Lux Photography](https://github.com/user-attachments/assets/f2a4296c-6d03-45e5-83e7-a652364e9614#gh-dark-mode-only)
 
 ## Welcome to Lux Photography
 
