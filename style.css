@@ -638,6 +638,11 @@ footer .quick-links ul li {
     #discover .img-wrapper img {
         color: var(--clr-white);
     }
+    #price-icons .grid-container .left h2,
+    #price-icons .grid-container .center h2,
+    #price-icons .grid-container .right h2 {
+        color: var(--clr-grey);
+    }
     #image-edit .img-wrapper {
         border: solid 1.5px var(--clr-grey);
     }
