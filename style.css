@@ -55,6 +55,7 @@ body {
     margin: 0 auto;
     height: 100vh;
     background-color: var(--clr-white);
+    font-family: 'Poppins', sans-serif;
     color: var(--clr-blk);
     cursor: default;
 }
@@ -220,9 +221,8 @@ nav.menu-open .hamburger-menu .bars::after {
         top: 1.5rem;
     }
 }
-section {
+.wrapper {
     padding: 1.25rem;
-    font-family: 'Poppins', sans-serif;
 }
 #photographers .grid-container {
     display: grid;
@@ -257,6 +257,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin-top: 1rem;
 }
 #discover .img-wrapper {
     position: relative;
@@ -378,6 +379,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    margin-top: 2.5rem;
 }
 #image-edit .img-wrapper {
     position: relative;
@@ -520,9 +522,15 @@ footer .quick-links ul li {
         grid-template-columns: 1fr;
         gap: .5rem;
     }
+    #discover .grid-container {
+        margin-top: 2rem;
+    }
     #memories .grid-container {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    #image-edit .grid-container {
+        margin-top: 1.5rem;
     }
     footer .grid-container {
         grid-template-columns: repeat(2, 1fr);
