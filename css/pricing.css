@@ -47,13 +47,15 @@
     --clr-charcoal: #454545;
     --clr-grey: #c4c4c4;
     --clr-darkGrey: #313030;
+    --clr-lightGrey: #8b8b8b;
     --clr-lightBrown: #a68e8e;
 }
 body {
     width: 100%;
     max-width: 90rem;
+    margin: 0 auto;
     height: 100vh;
-    background-color: var(--clr-offWhite);
+    background-color: var(--clr-white);
     color: var(--clr-blk);
     cursor: default;
 }
@@ -93,11 +95,11 @@ nav.menu-open .hamburger-menu .bars::after {
 .links ul li a::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -.313rem;
     left: 50%;
     width: 0;
-    height: .5px;
-    background-color: var(--clr-darkGrey);
+    height: .045rem;
+    background-color: var(--clr-lightGrey);
     transition: width 350ms ease, left 350ms ease;
 }
 .links ul li a:hover::before {
@@ -124,7 +126,7 @@ nav.menu-open .hamburger-menu .bars::after {
 }
 .bars {
     position: relative;
-    height: 3px;
+    height: .188rem;
     width: 100%;
     border-radius: 5px;
     background-color: transparent;
@@ -140,10 +142,10 @@ nav.menu-open .hamburger-menu .bars::after {
     transition: transform 350ms ease;
 }
 .bars::before {
-    transform: translateY(-4px);
+    transform: translateY(-.25rem);
 }
 .bars::after {
-    transform: translateY(4px);
+    transform: translateY(.25rem);
 }
 .content-wrapper {
     display: grid;
@@ -226,7 +228,8 @@ nav.menu-open .hamburger-menu .bars::after {
 .card .list ul li .icon {
     position: relative;
     top: .45rem;
-    margin-right: .25rem;
+    right: .25rem;
+    margin-left: 2rem;
     stroke: var(--clr-blk);
 }
 .card span {
@@ -250,7 +253,7 @@ footer {
     background: var(--clr-darkGrey);
     color: var(--clr-offWhite);
     font-family: 'Poppins', sans-serif;
-    padding: 1.75rem 2.5rem;
+    padding: 1.25rem;
 }
 footer .grid-container {
     display: grid;
@@ -309,7 +312,7 @@ footer .quick-links ul li {
         padding: .75rem;
     }
     .mobile-header img {
-        width: 30px;
+        width: 1.875rem;
         height: auto;
         margin-bottom: 0;
     }
@@ -384,9 +387,6 @@ footer .quick-links ul li {
     .content-wrapper {
         grid-template-columns: repeat(2, 18rem);
     }
-    footer {
-        padding: 1rem 1.5rem;
-    }
     footer .about p {
         width: 95%;
     }
@@ -394,7 +394,12 @@ footer .quick-links ul li {
 @media screen and (max-width: 725px) {
     footer .grid-container {
         grid-template-columns: 1fr;
-        gap: 3rem 10rem;
+    }
+    footer .grid-container {
+        grid-template-columns: 1fr;
+    }
+    footer ul li {
+        margin-top: .25rem;
     }
 }
 @media screen and (max-width: 658px) {
