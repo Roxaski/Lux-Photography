@@ -28,11 +28,17 @@ function toggleHamburgerMenu() {
         mobileHeader.inert = menuOpen;
     };
 
-    // adds or removes the esc key event listener when the hamburger menu is open or closed
+    /*
+        adds or removes the event listener depending on whether the hamburger is open or not,
+        and sets the aria-expanded accordingly for screen reader users
+    */
+   
     if (menuOpen) {
         document.addEventListener('keydown', escapeKeyPress);
+        menu.setAttribute('aria-expanded', 'true');
     } else {
         document.removeEventListener('keydown', escapeKeyPress);
+        menu.setAttribute('aria-expanded', 'false');
     };
 };
 
