@@ -616,17 +616,12 @@ footer .quick-links ul li {
         display: none;
     }
 }
-@media screen and (prefers-color-scheme: dark) and (max-width: 1195px) {
-    .links {
-        background-color: var(--clr-blk);
-    }
-    .links ul li a {
-        color: var(--clr-grey);
-    }
-}
 @media screen and (prefers-color-scheme: dark) {
     body {
         color: var(--clr-grey);
+        background-color: var(--clr-blk);
+    }
+    .links {
         background-color: var(--clr-blk);
     }
     .links ul li a {
