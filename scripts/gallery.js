@@ -280,11 +280,6 @@ lightboxImg.addEventListener('touchend', (e) => {
         return;
     };
 
-    // returns early if any fingers are still on the screen
-    if (e.touches.length > 0) {
-        return;
-    };
-
     // the position of where the finger lifted off the screen
     screenTapEnd = e.changedTouches[0].clientX;
 
