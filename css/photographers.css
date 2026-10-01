@@ -150,7 +150,7 @@ nav.menu-open .hamburger-menu .bars::after {
 .content-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 125px auto;
+    margin: 6rem auto;
 }
 .card {
     position: relative;
@@ -160,13 +160,11 @@ nav.menu-open .hamburger-menu .bars::after {
     align-items: center;
     background: var(--clr-brightGrey);
     border: solid 1px var(--clr-mediumGrey);
-    border-radius: 5px;
     width: 250px;
     height: 300px;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
     overflow: visible;
-    transition: transform 250ms ease;
     cursor: pointer;
 }
 .card .more-info {
@@ -174,7 +172,6 @@ nav.menu-open .hamburger-menu .bars::after {
     bottom: 1rem;
     opacity: 1;
     text-align: center;
-    transition: opacity 250ms ease;
 }
 .card .more-info h2 {
     text-transform: uppercase;
@@ -189,24 +186,20 @@ nav.menu-open .hamburger-menu .bars::after {
 }
 .card.active .more-info {
     opacity: 0;
-    transition: opacity 250ms ease;
 }
 .card .more-info .chevron {
     color: var(--clr-mediumGrey);
     margin: .35rem auto;
 }
 .card .img-container {
-    position: absolute;
-    top: 20px;
+    transform: translateY(40px);
     width: 200px;
     height: 150px;
-    border-radius: 5px;
     overflow: hidden;
     transition: transform 250ms ease-in-out;
-    z-index: 1;
 }
 .card.active .img-container {
-    transform: translate3d(0, -5.5rem, 0);
+    transform: translateY(-25px);
 }
 .card .img-container img {
     position: absolute;
@@ -215,14 +208,11 @@ nav.menu-open .hamburger-menu .bars::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 5px;
-    font-family: 'Poppins', sans-serif;
+    aspect-ratio: 16 / 9;
 }
 .card .content {
     width: 100%;
-    padding: .75rem;
     opacity: 0;
-    transition: opacity 250ms ease;
 }
 .card.active .content {
     opacity: 1;
@@ -231,6 +221,7 @@ nav.menu-open .hamburger-menu .bars::after {
     font-size: clamp(.95rem, 3vw, 1rem);
     line-height: 1.7;
     font-weight: 300;
+    padding: 0 .75rem .75rem .75rem;
 }
 footer {
     position: absolute;
@@ -356,7 +347,7 @@ footer .quick-links ul li {
     .content-wrapper {
         grid-template-columns: repeat(2, 1fr);
         max-width: 600px;
-        gap: 7rem;
+        gap: 5rem;
     }
     footer {
         position: relative;
