@@ -165,6 +165,7 @@ nav.menu-open .hamburger-menu .bars::after {
     transform: translate(-50%, -50%);
     width: fit-content;
     height: auto;
+    touch-action: pinch-zoom;
     z-index: 3;
 }
 .lightbox-no-scroll {
@@ -177,10 +178,18 @@ nav.menu-open .hamburger-menu .bars::after {
     width: auto;
     height: auto;
     object-fit: contain;
+    user-select: none;
+    transition: 300ms ease-in-out;
     cursor: default;
 }
 .lightbox > img.active {
     display: block;
+}
+.lightbox > img.zoom {
+    transform: scale(2);
+}
+.lightbox > img.drag {
+    transition: none;
 }
 .lightbox .btn {
     position: absolute;
@@ -274,6 +283,16 @@ footer .quick-links ul li {
     letter-spacing: .5px;
     font-size: clamp(.85rem, 3vw, .9rem);
 }
+@media (hover: hover) {
+    .lightbox > img.zoom {
+        transform: scale(1.25);
+    }
+}
+@media (hover: none) {
+    .lightbox .btn {
+        display: none;
+    }
+}
 @media screen and (max-width: 1195px) {
     .no-scroll {
         position: fixed;
@@ -356,9 +375,6 @@ footer .quick-links ul li {
 @media screen and (max-width: 1150px) {
     .lightbox > img {
         margin: 0 auto;
-    }
-    .lightbox .btn {
-        display: none;
     }
 }
 @media screen and (max-width: 990px) {
