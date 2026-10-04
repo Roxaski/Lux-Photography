@@ -175,11 +175,12 @@ nav.menu-open .hamburger-menu .bars::after {
     display: none;
     max-width: 90vw;
     max-height: 85vh;
+    aspect-ratio: 16 / 9;
     width: auto;
     height: auto;
     object-fit: contain;
     user-select: none;
-    transition: 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
     cursor: default;
 }
 .lightbox > img.active {
