@@ -160,6 +160,7 @@ nav.menu-open .hamburger-menu .bars::after {
     align-items: center;
     background: var(--clr-brightGrey);
     border: solid 1px var(--clr-mediumGrey);
+    -webkit-tap-highlight-color: transparent;
     width: 250px;
     height: 300px;
     margin: 0 auto;
