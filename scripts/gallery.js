@@ -265,10 +265,12 @@ lightboxImg.addEventListener('touchend', (e) => {
     // checks if the difference in screen taps was equal to or less than 300
     if(currentTapTime - screenTap <= 300) {
         lightboxImg.classList.toggle('zoom');
+        // sets the screen tap back to 0 after the zoom happens to prevent issues with multiple taps
+        screenTap = 0;
+    } else {
+        // updates the variable with the most recent tap, so that the next touchend can be compared to it
+        screenTap = currentTapTime;
     };
-
-    // updates the variable with the most recent tap, so that the next touchend can be compared to it
-    screenTap = currentTapTime;
 
     // if the image isn't zoomed in then sets the transform to an empty string to remove scale(2), else it just returns early
     if(!lightboxImg.classList.contains('zoom')) {
