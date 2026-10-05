@@ -374,11 +374,6 @@ footer .quick-links ul li {
         gap: 2rem;
     }
 }
-@media screen and (max-width: 1150px) {
-    .lightbox > img {
-        margin: 0 auto;
-    }
-}
 @media screen and (max-width: 990px) {
     footer .about p {
         width: 95%;
