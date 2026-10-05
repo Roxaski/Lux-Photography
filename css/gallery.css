@@ -413,9 +413,6 @@ footer .quick-links ul li {
         transform: translate(-50%, -50%);
         height: auto;
     }
-    .lightbox .btn {
-        display: none;
-    }
 }
 @media screen and (orientation: landscape) and (max-width: 935px) {
     .links ul li {
